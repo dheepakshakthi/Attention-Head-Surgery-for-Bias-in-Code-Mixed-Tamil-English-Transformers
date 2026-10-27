@@ -1,0 +1,245 @@
+{
+  "bias_table": {
+    "CF gap (all pairs)": {
+      "baseline": 0.001058212830685079,
+      "surgery": 0.0009568126988597214,
+      "adversarial": 0.0008672401891089976,
+      "gain_adv": 0.00019097264157608151,
+      "gain_surgery": 0.00010140013182535768,
+      "recovery": 0.5309667970684739
+    },
+    "CF gap (natural pairs)": {
+      "baseline": 0.0019098998745903373,
+      "surgery": 0.0017195827094838023,
+      "adversarial": 0.0015578166348859668,
+      "gain_adv": 0.0003520832397043705,
+      "gain_surgery": 0.00019031716510653496,
+      "recovery": 0.5405459381319494
+    },
+    "CF gap (template pairs)": {
+      "baseline": 0.00011780837667174637,
+      "surgery": 0.00011458744847914204,
+      "adversarial": 0.00010472867143107578,
+      "gain_adv": 1.3079705240670592e-05,
+      "gain_surgery": 3.220928192604333e-06,
+      "recovery": 0.2462538821279429
+    },
+    "CF flip rate": {
+      "baseline": 0.0,
+      "surgery": 0.0,
+      "adversarial": 0.0,
+      "gain_adv": 0.0,
+      "gain_surgery": 0.0,
+      "recovery": null
+    },
+    "Template FPED": {
+      "baseline": 0.0,
+      "surgery": 0.0,
+      "adversarial": 0.0,
+      "gain_adv": 0.0,
+      "gain_surgery": 0.0,
+      "recovery": null
+    },
+    "Template range": {
+      "baseline": 0.00020865649275947362,
+      "surgery": 0.00019773095846176147,
+      "adversarial": 0.00017867833958007395,
+      "gain_adv": 2.997815317939967e-05,
+      "gain_surgery": 1.0925534297712147e-05,
+      "recovery": 0.36444987896118747
+    },
+    "Group FPED (real)": {
+      "baseline": 0.0,
+      "surgery": 0.0,
+      "adversarial": 0.0,
+      "gain_adv": 0.0,
+      "gain_surgery": 0.0,
+      "recovery": null
+    },
+    "Group FNED (real)": {
+      "baseline": 0.0,
+      "surgery": 0.0,
+      "adversarial": 0.0,
+      "gain_adv": 0.0,
+      "gain_surgery": 0.0,
+      "recovery": null
+    }
+  },
+  "task": {
+    "hasoc_val": {
+      "baseline": {
+        "accuracy": 0.7733333333333333,
+        "macro_f1": 0.43609022556390975,
+        "offensive_f1": 0.0
+      },
+      "surgery": {
+        "accuracy": 0.7733333333333333,
+        "macro_f1": 0.43609022556390975,
+        "offensive_f1": 0.0
+      },
+      "adversarial": {
+        "accuracy": 0.7733333333333333,
+        "macro_f1": 0.43609022556390975,
+        "offensive_f1": 0.0
+      }
+    },
+    "test": {
+      "baseline": {
+        "accuracy": 0.7533333333333333,
+        "macro_f1": 0.4296577946768061,
+        "offensive_f1": 0.0
+      },
+      "surgery": {
+        "accuracy": 0.7533333333333333,
+        "macro_f1": 0.4296577946768061,
+        "offensive_f1": 0.0
+      },
+      "adversarial": {
+        "accuracy": 0.7533333333333333,
+        "macro_f1": 0.4296577946768061,
+        "offensive_f1": 0.0
+      }
+    }
+  },
+  "cost": {
+    "surgery_flops": 30493953058.0,
+    "adversarial_flops": 47938606352.0,
+    "surgery_wall_s": 2.348349585008691,
+    "adversarial_wall_s": 1.893761118000839,
+    "ratio_flops": 0.6361042879321791,
+    "ratio_wall": 1.240045305971717,
+    "surgery_phases": {
+      "screen": {
+        "wall_seconds": 0.9646439200005261,
+        "fwd_tokens": 3453,
+        "bwd_tokens": 1561,
+        "approx_flops": 1156266350.0
+      },
+      "exact": {
+        "wall_seconds": 0.4328778050003166,
+        "fwd_tokens": 14063,
+        "bwd_tokens": 0,
+        "approx_flops": 2473091054.0
+      },
+      "ablate": {
+        "wall_seconds": 0.20481742400079384,
+        "fwd_tokens": 60389,
+        "bwd_tokens": 0,
+        "approx_flops": 10619888762.0
+      },
+      "select": {
+        "wall_seconds": 0.1149208200040448,
+        "fwd_tokens": 34508,
+        "bwd_tokens": 0,
+        "approx_flops": 6068507864.0
+      },
+      "gates": {
+        "wall_seconds": 0.47593565200077137,
+        "fwd_tokens": 18918,
+        "bwd_tokens": 18918,
+        "approx_flops": 9980644932.0
+      },
+      "report": {
+        "wall_seconds": 0.15515396400223835,
+        "fwd_tokens": 1112,
+        "bwd_tokens": 0,
+        "approx_flops": 195554096.0
+      }
+    },
+    "ratio_flops_incl_full_analysis": 0.9306915091022169,
+    "ratio_wall_incl_full_analysis": 1.806522137079535,
+    "baseline_flops": 14492327606.0,
+    "surgery_vs_baseline_flops": 2.104144612724262
+  },
+  "verdict": {
+    "recovery": 0.5309667970684739,
+    "recovery_ci95": [
+      0.4992087259888649,
+      0.5579120576381683
+    ],
+    "recovery_threshold": 0.8,
+    "recovers_most": false,
+    "adversarial_gain_positive": true,
+    "cost_ratio_flops": 0.6361042879321791,
+    "cost_target": 0.05,
+    "cost_about_5pct": false,
+    "surgery_f1_drop": 0.0,
+    "adversarial_f1_drop": 0.0,
+    "surgery_task_preserved": true,
+    "names_what_was_removed": true,
+    "claim_supported": false
+  },
+  "removed": [
+    {
+      "head": "L3.H1",
+      "gate": 0.6125887632369995,
+      "primary_proxy_category": "dialect"
+    },
+    {
+      "head": "L2.H0",
+      "gate": 0.6177525520324707,
+      "primary_proxy_category": "translit_style"
+    },
+    {
+      "head": "L0.H1",
+      "gate": 0.6179453134536743,
+      "primary_proxy_category": "religion"
+    }
+  ],
+  "leakage_probe": {
+    "baseline": {
+      "script": {
+        "probe_accuracy": 0.6875,
+        "chance": 0.5
+      },
+      "translit_style": {
+        "probe_accuracy": 0.45000001788139343,
+        "chance": 0.5
+      },
+      "region": {
+        "probe_accuracy": 0.5,
+        "chance": 0.5
+      },
+      "caste": {
+        "probe_accuracy": 0.21212121844291687,
+        "chance": 0.16666666666666666
+      }
+    },
+    "surgery": {
+      "script": {
+        "probe_accuracy": 0.6875,
+        "chance": 0.5
+      },
+      "translit_style": {
+        "probe_accuracy": 0.45000001788139343,
+        "chance": 0.5
+      },
+      "region": {
+        "probe_accuracy": 0.375,
+        "chance": 0.5
+      },
+      "caste": {
+        "probe_accuracy": 0.21212121844291687,
+        "chance": 0.16666666666666666
+      }
+    },
+    "adversarial": {
+      "script": {
+        "probe_accuracy": 0.6875,
+        "chance": 0.5
+      },
+      "translit_style": {
+        "probe_accuracy": 0.45000001788139343,
+        "chance": 0.5
+      },
+      "region": {
+        "probe_accuracy": 0.625,
+        "chance": 0.5
+      },
+      "caste": {
+        "probe_accuracy": 0.21212121844291687,
+        "chance": 0.16666666666666666
+      }
+    }
+  }
+}

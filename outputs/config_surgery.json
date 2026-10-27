@@ -1,0 +1,114 @@
+{
+  "seed": 42,
+  "device": "auto",
+  "output_dir": "outputs",
+  "model": {
+    "name": "xlm-roberta-base",
+    "dropout": 0.1
+  },
+  "data": {
+    "task": "offensive",
+    "primary": "dravidiancodemix",
+    "dravidian_dir": "DravidianCodeMix",
+    "hasoc_dir": "HASOC_Tamil_offensive",
+    "use_second_eval": true,
+    "max_train_examples": null,
+    "max_dev_examples": null,
+    "max_eval_examples": null
+  },
+  "lexicon": {
+    "seed_path": "resources/proxy_lexicon.seed.json",
+    "validated_path": "resources/proxy_lexicon.validated.json",
+    "prefer_validated": true,
+    "min_confidence": "low"
+  },
+  "counterfactual": {
+    "templates_path": "resources/templates.json",
+    "categories": [
+      "caste",
+      "religion",
+      "region",
+      "dialect",
+      "script",
+      "translit_style"
+    ],
+    "max_swaps_per_text": 2,
+    "max_pairs_per_category_train": 4000,
+    "max_pairs_per_category_eval": 1500,
+    "use_templates": true
+  },
+  "train": {
+    "max_length": 128,
+    "batch_size": 8,
+    "eval_batch_size": 32,
+    "grad_accum": 4,
+    "epochs": 3,
+    "lr": 2e-05,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.06,
+    "max_grad_norm": 1.0,
+    "fp16": true,
+    "class_weighted": true,
+    "patience": 2,
+    "max_steps": null,
+    "freeze_word_embeddings": true,
+    "gradient_checkpointing": true,
+    "optimizer_foreach": false
+  },
+  "analysis": {
+    "enabled": true,
+    "pairs_per_category": 40,
+    "mediators": [
+      "head_output",
+      "attention"
+    ],
+    "intervention_chunk": 12
+  },
+  "surgery": {
+    "target_categories": null,
+    "mediator": "head_output",
+    "screen_pairs_per_category": 64,
+    "exact_top_m": 24,
+    "exact_pairs_per_category": 24,
+    "intervention_chunk": 12,
+    "dev_pairs_per_category": 60,
+    "dev_task_examples": 400,
+    "ablation_weight": 0.5,
+    "k_max": 10,
+    "select_frac": 0.9,
+    "max_f1_drop": 0.01,
+    "reweight": "learned",
+    "scale_alpha": 0.3,
+    "gate_training": {
+      "steps": 150,
+      "batch_size": 8,
+      "pair_batch_size": 8,
+      "lr": 0.05,
+      "cf_weight": 1.0,
+      "init": 0.5,
+      "max_gate": 1.0
+    }
+  },
+  "adversarial": {
+    "lambda": 1.0,
+    "adv_weight": 1.0,
+    "adv_batch_size": 24,
+    "adversary_width": 256,
+    "min_group_count": 10,
+    "train_overrides": {}
+  },
+  "cda": {
+    "enabled": false
+  },
+  "evaluation": {
+    "n_bootstrap": 1000,
+    "min_group_count": 20,
+    "probe_leakage": true
+  },
+  "comparison": {
+    "recovery_threshold": 0.8,
+    "cost_target": 0.05,
+    "cost_tolerance": 2.0,
+    "max_f1_drop": 0.02
+  }
+}

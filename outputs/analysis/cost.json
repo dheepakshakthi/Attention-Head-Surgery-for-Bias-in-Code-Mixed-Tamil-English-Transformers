@@ -1,0 +1,24 @@
+{
+  "name": "analysis",
+  "n_params": 278043648,
+  "fwd_tokens": 4311430,
+  "bwd_tokens": 0,
+  "approx_flops": 2397531450593280.0,
+  "wall_seconds": 2846.5768314590005,
+  "optimizer_steps": 0,
+  "gpu": "NVIDIA GeForce GTX 1650",
+  "phases": {
+    "exact_head_output": {
+      "wall_seconds": 1423.3518193960008,
+      "fwd_tokens": 2155715,
+      "bwd_tokens": 0,
+      "approx_flops": 1198765725296640.0
+    },
+    "exact_attention": {
+      "wall_seconds": 1423.2250120629997,
+      "fwd_tokens": 2155715,
+      "bwd_tokens": 0,
+      "approx_flops": 1198765725296640.0
+    }
+  }
+}

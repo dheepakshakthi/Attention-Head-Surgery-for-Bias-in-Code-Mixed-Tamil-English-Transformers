@@ -1,0 +1,14 @@
+{
+  "history": [
+    {
+      "accuracy": 0.755,
+      "macro_f1": 0.4301994301994302,
+      "offensive_f1": 0.0,
+      "epoch": 0,
+      "step": 38,
+      "train_loss": 0.6900065713807156
+    }
+  ],
+  "best_dev_macro_f1": 0.4301994301994302,
+  "steps": 38
+}

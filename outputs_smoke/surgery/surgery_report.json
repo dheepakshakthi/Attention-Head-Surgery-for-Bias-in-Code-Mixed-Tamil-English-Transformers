@@ -1,0 +1,359 @@
+{
+  "heads": [
+    {
+      "head": "L3.H1",
+      "gate": 0.6125887632369995,
+      "primary_proxy_category": "dialect",
+      "per_category": {
+        "caste": {
+          "nie_oriented": -2.282857894897461e-05,
+          "nde_oriented": 0.0005330443382263184,
+          "nie_share_of_te": -0.04474299065420561
+        },
+        "dialect": {
+          "nie_oriented": 0.0002532005310058594,
+          "nde_oriented": 0.00044015049934387207,
+          "nie_share_of_te": 0.36510528577567686
+        },
+        "region": {
+          "nie_oriented": 5.4463744163513184e-05,
+          "nde_oriented": 0.0002266913652420044,
+          "nie_share_of_te": 0.19371422514309944
+        },
+        "religion": {
+          "nie_oriented": 4.430115222930908e-05,
+          "nde_oriented": 0.00021885335445404053,
+          "nie_share_of_te": 0.168356079053174
+        },
+        "script": {
+          "nie_oriented": 0.0008074939250946045,
+          "nde_oriented": 0.01983940601348877,
+          "nie_share_of_te": 0.03909383675094795
+        },
+        "translit_style": {
+          "nie_oriented": 3.774464130401611e-05,
+          "nde_oriented": 0.0011114031076431274,
+          "nie_share_of_te": 0.03284662067534623
+        }
+      },
+      "dev_single_ablation": {
+        "d_cf_gap": -4.2789208237081766e-05,
+        "d_macro_f1": 0.0
+      },
+      "proxy_attention_ratio": 1.0014178648968575,
+      "top_mediated_swaps": [
+        {
+          "swap": "script:tamil_script->roman",
+          "mean_oriented_nie": 0.0008074939250946045,
+          "n": 4
+        },
+        {
+          "swap": "translit_style:long_style->short_style",
+          "mean_oriented_nie": 3.774464130401611e-05,
+          "n": 4
+        },
+        {
+          "swap": "religion:hindu->muslim",
+          "mean_oriented_nie": -3.24249267578125e-05,
+          "n": 3
+        }
+      ],
+      "examples": [
+        {
+          "text_a": "இதையே மேடபோட்டு சொன்னா சாதி வெறியன் இப்போ இத்தனை மக்கள் ஆதரவு தாராங்களே இதுக்கென்ன சொல்போரிங்க இவனுங்க எல்லா இடத்திலும் கைவச்சிருக்கானுங்க போல நாங்களும் படம் எடுப்போம் உங்களமாதிரி வித்து பணம் பாக்க இல்ல மக்கள் எல்லாத்தையும் தெரிந்து கொள்ள படம் திரையரங்குகளில் மறுக்கப்பட்டாலும் மக்களிடம் போய் சேரும்",
+          "text_b": "ithaiyae maedapoddu sonnaa saathi veriyan ippo itthanai makkal aatharavu thaaraangalae ithukkenna solporinga ivanunga ellaa idatthilum kaivassirukkaanunga pola naangalum padam eduppom ungalamaathiri vitthu panam paakka illa makkal ellaatthaiyum therinthu kolla padam thiraiyarangukalil marukkappaddaalum makkalidam poy saerum",
+          "te": 0.029965579509735107,
+          "nie": 0.0023723244667053223
+        },
+        {
+          "text_a": "ஜாதிய ரீதியிலான சலுகைகள் கொடுக்கும் அரசு எப்படி ஜாதியை ஒழிக்கும். ஜாதிய ரீதியிலான சலுகைகளை கொடுக்கும் அரசும். ஜாதியை தூக்கி பிடிக்கும் அரசியலும் இருக்கும் வரை ஜாதிகள் ஒழியாது. இவை ஜாதியை ஒழிக்காமல் கண்டிப்பாக தூக்கி பிடிக்கத்தான் செய்யும். இப்படி செய்யும் அரசு ஜாதியை ஒழிக்கும் என்று நினைத்தால் நாம் தான் முட்டாள். இட ஒதுக்கீட்டை மறுபரிசீலனை செய்ய வேண்டும். ஜாதிய ரீதியிலான வேறுபாடுகள் இந்து மதத்தில் மட்டுமல்ல எல்லா மதங்களிலும் இருக்கவே செய்கின்றன.",
+          "text_b": "jaathiya reethiyilaana salukaikal kodukkum arasu eppadi jaathiyai ozhikkum. jaathiya reethiyilaana salukaikalai kodukkum arasum. jaathiyai thookki pidikkum arasiyalum irukkum varai jaathikal ozhiyaathu. ivai jaathiyai ozhikkaamal kandippaaka thookki pidikkatthaan seyyum. ippadi seyyum arasu jaathiyai ozhikkum enru ninaitthaal naam thaan muddaal. ida othukkeeddai marupariseelanai seyya vaendum. jaathiya reethiyilaana vaerupaadukal inthu mathatthil maddumalla ellaa mathangalilum irukkavae seykinrana.",
+          "te": 0.02581554651260376,
+          "nie": 0.002118051052093506
+        },
+        {
+          "text_a": "நல்லாருக்கியா . யாரு Director ? 2D நா நம்பளாம் .",
+          "text_b": "nallaarukkiyaa . yaaru Director ? 2D naa nampalaam .",
+          "te": 0.00878751277923584,
+          "nie": -0.0010167956352233887
+        }
+      ]
+    },
+    {
+      "head": "L2.H0",
+      "gate": 0.6177525520324707,
+      "primary_proxy_category": "translit_style",
+      "per_category": {
+        "caste": {
+          "nie_oriented": -0.00014719367027282715,
+          "nde_oriented": 0.0006573796272277832,
+          "nie_share_of_te": -0.2884929906542056
+        },
+        "dialect": {
+          "nie_oriented": -4.7206878662109375e-05,
+          "nde_oriented": 0.0007406771183013916,
+          "nie_share_of_te": -0.0680704770090245
+        },
+        "region": {
+          "nie_oriented": -0.00010757148265838623,
+          "nde_oriented": 0.0003887563943862915,
+          "nie_share_of_te": -0.3826054695781217
+        },
+        "religion": {
+          "nie_oriented": 8.866190910339355e-06,
+          "nde_oriented": 0.0002543032169342041,
+          "nie_share_of_te": 0.03369386714989524
+        },
+        "script": {
+          "nie_oriented": 0.00335693359375,
+          "nde_oriented": 0.017305627465248108,
+          "nie_share_of_te": 0.16252185907461808
+        },
+        "translit_style": {
+          "nie_oriented": 0.0003426671028137207,
+          "nde_oriented": 0.0008065700531005859,
+          "nie_share_of_te": 0.2982001141138026
+        }
+      },
+      "dev_single_ablation": {
+        "d_cf_gap": -0.0001431480050086975,
+        "d_macro_f1": 0.0
+      },
+      "proxy_attention_ratio": 1.0009543300198074,
+      "top_mediated_swaps": [
+        {
+          "swap": "script:tamil_script->roman",
+          "mean_oriented_nie": 0.00335693359375,
+          "n": 4
+        },
+        {
+          "swap": "translit_style:long_style->short_style",
+          "mean_oriented_nie": 0.0003426671028137207,
+          "n": 4
+        },
+        {
+          "swap": "religion:hindu->muslim",
+          "mean_oriented_nie": 4.4246514638264976e-05,
+          "n": 3
+        }
+      ],
+      "examples": [
+        {
+          "text_a": "இக்காலத்துக்கு தேவைப்படும் படம்... இது போன்ற படம் எடுக்க நிச்சயம் துணிச்சல் வேண்டும்.... வெற்றிபெற வாழ்த்துக்கள்....",
+          "text_b": "ikkaalatthukku thaevaippadum padam... ithu ponra padam edukka nissayam thunissal vaendum.... verripera vaazhtthukkal....",
+          "te": 0.01805245876312256,
+          "nie": 0.004420638084411621
+        },
+        {
+          "text_a": "இதையே மேடபோட்டு சொன்னா சாதி வெறியன் இப்போ இத்தனை மக்கள் ஆதரவு தாராங்களே இதுக்கென்ன சொல்போரிங்க இவனுங்க எல்லா இடத்திலும் கைவச்சிருக்கானுங்க போல நாங்களும் படம் எடுப்போம் உங்களமாதிரி வித்து பணம் பாக்க இல்ல மக்கள் எல்லாத்தையும் தெரிந்து கொள்ள படம் திரையரங்குகளில் மறுக்கப்பட்டாலும் மக்களிடம் போய் சேரும்",
+          "text_b": "ithaiyae maedapoddu sonnaa saathi veriyan ippo itthanai makkal aatharavu thaaraangalae ithukkenna solporinga ivanunga ellaa idatthilum kaivassirukkaanunga pola naangalum padam eduppom ungalamaathiri vitthu panam paakka illa makkal ellaatthaiyum therinthu kolla padam thiraiyarangukalil marukkappaddaalum makkalidam poy saerum",
+          "te": 0.029965579509735107,
+          "nie": 0.0033143162727355957
+        },
+        {
+          "text_a": "ஜாதிய ரீதியிலான சலுகைகள் கொடுக்கும் அரசு எப்படி ஜாதியை ஒழிக்கும். ஜாதிய ரீதியிலான சலுகைகளை கொடுக்கும் அரசும். ஜாதியை தூக்கி பிடிக்கும் அரசியலும் இருக்கும் வரை ஜாதிகள் ஒழியாது. இவை ஜாதியை ஒழிக்காமல் கண்டிப்பாக தூக்கி பிடிக்கத்தான் செய்யும். இப்படி செய்யும் அரசு ஜாதியை ஒழிக்கும் என்று நினைத்தால் நாம் தான் முட்டாள். இட ஒதுக்கீட்டை மறுபரிசீலனை செய்ய வேண்டும். ஜாதிய ரீதியிலான வேறுபாடுகள் இந்து மதத்தில் மட்டுமல்ல எல்லா மதங்களிலும் இருக்கவே செய்கின்றன.",
+          "text_b": "jaathiya reethiyilaana salukaikal kodukkum arasu eppadi jaathiyai ozhikkum. jaathiya reethiyilaana salukaikalai kodukkum arasum. jaathiyai thookki pidikkum arasiyalum irukkum varai jaathikal ozhiyaathu. ivai jaathiyai ozhikkaamal kandippaaka thookki pidikkatthaan seyyum. ippadi seyyum arasu jaathiyai ozhikkum enru ninaitthaal naam thaan muddaal. ida othukkeeddai marupariseelanai seyya vaendum. jaathiya reethiyilaana vaerupaadukal inthu mathatthil maddumalla ellaa mathangalilum irukkavae seykinrana.",
+          "te": 0.02581554651260376,
+          "nie": 0.0032435059547424316
+        }
+      ]
+    },
+    {
+      "head": "L0.H1",
+      "gate": 0.6179453134536743,
+      "primary_proxy_category": "religion",
+      "per_category": {
+        "caste": {
+          "nie_oriented": -0.00010412931442260742,
+          "nde_oriented": 0.0006144046783447266,
+          "nie_share_of_te": -0.20408878504672898
+        },
+        "dialect": {
+          "nie_oriented": -1.6942620277404785e-05,
+          "nde_oriented": 0.0007103979587554932,
+          "nie_share_of_te": -0.02443059733562527
+        },
+        "region": {
+          "nie_oriented": 2.5138258934020996e-05,
+          "nde_oriented": 0.00025600194931030273,
+          "nie_share_of_te": 0.08941064235743057
+        },
+        "religion": {
+          "nie_oriented": 4.7266483306884766e-05,
+          "nde_oriented": 0.000215873122215271,
+          "nie_share_of_te": 0.1796251203352398
+        },
+        "script": {
+          "nie_oriented": 0.0014825016260147095,
+          "nde_oriented": 0.01918843388557434,
+          "nie_share_of_te": 0.07177351401577893
+        },
+        "translit_style": {
+          "nie_oriented": 1.671910285949707e-05,
+          "nde_oriented": 0.0011324882507324219,
+          "nie_share_of_te": 0.014549509829347995
+        }
+      },
+      "dev_single_ablation": {
+        "d_cf_gap": -5.0828850362449884e-05,
+        "d_macro_f1": 0.0
+      },
+      "proxy_attention_ratio": 1.0005449003338707,
+      "top_mediated_swaps": [
+        {
+          "swap": "script:tamil_script->roman",
+          "mean_oriented_nie": 0.0014825016260147095,
+          "n": 4
+        },
+        {
+          "swap": "translit_style:long_style->short_style",
+          "mean_oriented_nie": 1.671910285949707e-05,
+          "n": 4
+        },
+        {
+          "swap": "religion:hindu->muslim",
+          "mean_oriented_nie": -2.5908152262369793e-05,
+          "n": 3
+        }
+      ],
+      "examples": [
+        {
+          "text_a": "ஜாதிய ரீதியிலான சலுகைகள் கொடுக்கும் அரசு எப்படி ஜாதியை ஒழிக்கும். ஜாதிய ரீதியிலான சலுகைகளை கொடுக்கும் அரசும். ஜாதியை தூக்கி பிடிக்கும் அரசியலும் இருக்கும் வரை ஜாதிகள் ஒழியாது. இவை ஜாதியை ஒழிக்காமல் கண்டிப்பாக தூக்கி பிடிக்கத்தான் செய்யும். இப்படி செய்யும் அரசு ஜாதியை ஒழிக்கும் என்று நினைத்தால் நாம் தான் முட்டாள். இட ஒதுக்கீட்டை மறுபரிசீலனை செய்ய வேண்டும். ஜாதிய ரீதியிலான வேறுபாடுகள் இந்து மதத்தில் மட்டுமல்ல எல்லா மதங்களிலும் இருக்கவே செய்கின்றன.",
+          "text_b": "jaathiya reethiyilaana salukaikal kodukkum arasu eppadi jaathiyai ozhikkum. jaathiya reethiyilaana salukaikalai kodukkum arasum. jaathiyai thookki pidikkum arasiyalum irukkum varai jaathikal ozhiyaathu. ivai jaathiyai ozhikkaamal kandippaaka thookki pidikkatthaan seyyum. ippadi seyyum arasu jaathiyai ozhikkum enru ninaitthaal naam thaan muddaal. ida othukkeeddai marupariseelanai seyya vaendum. jaathiya reethiyilaana vaerupaadukal inthu mathatthil maddumalla ellaa mathangalilum irukkavae seykinrana.",
+          "te": 0.02581554651260376,
+          "nie": 0.0022559762001037598
+        },
+        {
+          "text_a": "இதையே மேடபோட்டு சொன்னா சாதி வெறியன் இப்போ இத்தனை மக்கள் ஆதரவு தாராங்களே இதுக்கென்ன சொல்போரிங்க இவனுங்க எல்லா இடத்திலும் கைவச்சிருக்கானுங்க போல நாங்களும் படம் எடுப்போம் உங்களமாதிரி வித்து பணம் பாக்க இல்ல மக்கள் எல்லாத்தையும் தெரிந்து கொள்ள படம் திரையரங்குகளில் மறுக்கப்பட்டாலும் மக்களிடம் போய் சேரும்",
+          "text_b": "ithaiyae maedapoddu sonnaa saathi veriyan ippo itthanai makkal aatharavu thaaraangalae ithukkenna solporinga ivanunga ellaa idatthilum kaivassirukkaanunga pola naangalum padam eduppom ungalamaathiri vitthu panam paakka illa makkal ellaatthaiyum therinthu kolla padam thiraiyarangukalil marukkappaddaalum makkalidam poy saerum",
+          "te": 0.029965579509735107,
+          "nie": 0.0015900731086730957
+        },
+        {
+          "text_a": "நல்லாருக்கியா . யாரு Director ? 2D நா நம்பளாம் .",
+          "text_b": "nallaarukkiyaa . yaaru Director ? 2D naa nampalaam .",
+          "te": 0.00878751277923584,
+          "nie": 0.0013222098350524902
+        }
+      ]
+    }
+  ],
+  "reweight": "learned",
+  "dev_before": {
+    "cf_gap": 0.0009366626618430018,
+    "cf_flip_rate": 0.0,
+    "macro_f1": 0.44751381215469616,
+    "by_category": {
+      "natural/caste": {
+        "n": 1,
+        "cf_gap": 0.0,
+        "cf_flip_rate": 0.0
+      },
+      "natural/dialect": {
+        "n": 6,
+        "cf_gap": 6.506840236397693e-06,
+        "cf_flip_rate": 0.0
+      },
+      "natural/region": {
+        "n": 2,
+        "cf_gap": 8.684396743774414e-05,
+        "cf_flip_rate": 0.0
+      },
+      "natural/religion": {
+        "n": 1,
+        "cf_gap": 0.0,
+        "cf_flip_rate": 0.0
+      },
+      "natural/script": {
+        "n": 10,
+        "cf_gap": 0.005016782786697149,
+        "cf_flip_rate": 0.0
+      },
+      "natural/translit_style": {
+        "n": 10,
+        "cf_gap": 0.00025522412033751607,
+        "cf_flip_rate": 0.0
+      },
+      "template/caste": {
+        "n": 9,
+        "cf_gap": 0.00015731983876321465,
+        "cf_flip_rate": 0.0
+      },
+      "template/dialect": {
+        "n": 4,
+        "cf_gap": 8.79243016242981e-05,
+        "cf_flip_rate": 0.0
+      },
+      "template/region": {
+        "n": 8,
+        "cf_gap": 6.177648901939392e-05,
+        "cf_flip_rate": 0.0
+      },
+      "template/religion": {
+        "n": 9,
+        "cf_gap": 0.00011168586206622422,
+        "cf_flip_rate": 0.0
+      }
+    }
+  },
+  "dev_after": {
+    "cf_gap": 0.0008435870404355228,
+    "cf_flip_rate": 0.0,
+    "macro_f1": 0.44751381215469616,
+    "by_category": {
+      "natural/caste": {
+        "n": 1,
+        "cf_gap": 0.0,
+        "cf_flip_rate": 0.0
+      },
+      "natural/dialect": {
+        "n": 6,
+        "cf_gap": 6.616115570068359e-06,
+        "cf_flip_rate": 0.0
+      },
+      "natural/region": {
+        "n": 2,
+        "cf_gap": 8.025765419006348e-05,
+        "cf_flip_rate": 0.0
+      },
+      "natural/religion": {
+        "n": 1,
+        "cf_gap": 0.0,
+        "cf_flip_rate": 0.0
+      },
+      "natural/script": {
+        "n": 10,
+        "cf_gap": 0.004493203945457935,
+        "cf_flip_rate": 0.0
+      },
+      "natural/translit_style": {
+        "n": 10,
+        "cf_gap": 0.00023911595053505152,
+        "cf_flip_rate": 0.0
+      },
+      "template/caste": {
+        "n": 9,
+        "cf_gap": 0.00014386243128683418,
+        "cf_flip_rate": 0.0
+      },
+      "template/dialect": {
+        "n": 4,
+        "cf_gap": 9.448081254959106e-05,
+        "cf_flip_rate": 0.0
+      },
+      "template/region": {
+        "n": 8,
+        "cf_gap": 5.174800753593445e-05,
+        "cf_flip_rate": 0.0
+      },
+      "template/religion": {
+        "n": 9,
+        "cf_gap": 0.00011168254422955215,
+        "cf_flip_rate": 0.0
+      }
+    }
+  },
+  "n_heads_total": 20,
+  "n_heads_modified": 3,
+  "trainable_parameters": 3
+}

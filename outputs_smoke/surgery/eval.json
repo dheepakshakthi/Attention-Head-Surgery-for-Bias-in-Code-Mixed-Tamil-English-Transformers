@@ -1,0 +1,661 @@
+{
+  "task": {
+    "hasoc_val": {
+      "accuracy": 0.7733333333333333,
+      "macro_f1": 0.43609022556390975,
+      "offensive_f1": 0.0
+    },
+    "test": {
+      "accuracy": 0.7533333333333333,
+      "macro_f1": 0.4296577946768061,
+      "offensive_f1": 0.0
+    }
+  },
+  "cf": {
+    "hasoc_val": {
+      "n_pairs": 291,
+      "cf_gap": 0.0010171571047976613,
+      "cf_flip_rate": 0.0,
+      "cf_gap_ci95": [
+        0.0007748368414468132,
+        0.001215395945473574
+      ],
+      "cf_flip_rate_ci95": [
+        0.0,
+        0.0
+      ],
+      "by_category": {
+        "natural/caste": {
+          "n": 18,
+          "cf_gap": 2.8242668122402392e-05,
+          "cf_flip_rate": 0.0
+        },
+        "natural/dialect": {
+          "n": 16,
+          "cf_gap": 7.968395948410034e-06,
+          "cf_flip_rate": 0.0
+        },
+        "natural/script": {
+          "n": 53,
+          "cf_gap": 0.005111213773488998,
+          "cf_flip_rate": 0.0
+        },
+        "natural/translit_style": {
+          "n": 60,
+          "cf_gap": 0.0001326993078691885,
+          "cf_flip_rate": 0.0
+        },
+        "template/caste": {
+          "n": 84,
+          "cf_gap": 0.00011557127436390147,
+          "cf_flip_rate": 0.0
+        },
+        "template/dialect": {
+          "n": 12,
+          "cf_gap": 0.00017255048442166299,
+          "cf_flip_rate": 0.0
+        },
+        "template/region": {
+          "n": 30,
+          "cf_gap": 7.852911949157715e-05,
+          "cf_flip_rate": 0.0
+        },
+        "template/religion": {
+          "n": 18,
+          "cf_gap": 0.00013145142293069512,
+          "cf_flip_rate": 0.0
+        }
+      },
+      "signed_group_shift": {
+        "caste/brahmin": -0.0001743265602272004,
+        "caste/chettiar": 0.0001291787630179897,
+        "caste/dalit": 3.084151467191987e-05,
+        "caste/gounder": -2.8461217880249023e-05,
+        "caste/mudaliar": 2.6482959583518095e-05,
+        "caste/nadar": 4.9543876230018213e-05,
+        "caste/thevar": -6.14263117313385e-05,
+        "caste/vanniyar": 1.4267586266214494e-05,
+        "dialect/jaffna": -4.1051043808693066e-05,
+        "dialect/kongu": 6.0342252254486084e-05,
+        "dialect/madras": 6.8632994043582585e-06,
+        "dialect/standard": 4.3901113144784176e-07,
+        "region/chennai": 1.6639629620840424e-06,
+        "region/jaffna": -5.6872766435844824e-05,
+        "region/kongu": 1.3348956599656958e-05,
+        "region/madurai": 0.00011185804760316387,
+        "region/nellai": -6.999820470809937e-05,
+        "religion/christian": -3.740191459655762e-05,
+        "religion/hindu": 7.114559412002563e-05,
+        "religion/muslim": -3.374367952346802e-05,
+        "script/roman": 0.005111213773488998,
+        "script/tamil_script": -0.005111213773488998,
+        "translit_style/long_style": 6.9093206548132e-05,
+        "translit_style/short_style": -6.9093206548132e-05
+      },
+      "natural_only": {
+        "n_pairs": 147,
+        "cf_gap": 0.0019013070268556476,
+        "cf_flip_rate": 0.0,
+        "by_category": {
+          "natural/caste": {
+            "n": 18,
+            "cf_gap": 2.8242668122402392e-05,
+            "cf_flip_rate": 0.0
+          },
+          "natural/dialect": {
+            "n": 16,
+            "cf_gap": 7.968395948410034e-06,
+            "cf_flip_rate": 0.0
+          },
+          "natural/script": {
+            "n": 53,
+            "cf_gap": 0.005111213773488998,
+            "cf_flip_rate": 0.0
+          },
+          "natural/translit_style": {
+            "n": 60,
+            "cf_gap": 0.0001326993078691885,
+            "cf_flip_rate": 0.0
+          }
+        },
+        "signed_group_shift": {
+          "caste/chettiar": -2.5324523448944092e-05,
+          "caste/dalit": 0.0,
+          "caste/gounder": -1.5348196029663086e-06,
+          "caste/mudaliar": 0.0,
+          "caste/nadar": -0.00012302398681640625,
+          "caste/thevar": 3.986466981587e-05,
+          "caste/vanniyar": 5.821386821480701e-06,
+          "dialect/jaffna": 4.820525646209717e-06,
+          "dialect/madras": 9.017686352308374e-06,
+          "dialect/standard": -7.968395948410034e-06,
+          "script/roman": 0.005111213773488998,
+          "script/tamil_script": -0.005111213773488998,
+          "translit_style/long_style": 6.9093206548132e-05,
+          "translit_style/short_style": -6.9093206548132e-05
+        }
+      },
+      "template_only": {
+        "n_pairs": 144,
+        "cf_gap": 0.00011458744847914204,
+        "cf_flip_rate": 0.0,
+        "by_category": {
+          "template/caste": {
+            "n": 84,
+            "cf_gap": 0.00011557127436390147,
+            "cf_flip_rate": 0.0
+          },
+          "template/dialect": {
+            "n": 12,
+            "cf_gap": 0.00017255048442166299,
+            "cf_flip_rate": 0.0
+          },
+          "template/region": {
+            "n": 30,
+            "cf_gap": 7.852911949157715e-05,
+            "cf_flip_rate": 0.0
+          },
+          "template/religion": {
+            "n": 18,
+            "cf_gap": 0.00013145142293069512,
+            "cf_flip_rate": 0.0
+          }
+        },
+        "signed_group_shift": {
+          "caste/brahmin": -0.0001743265602272004,
+          "caste/chettiar": 0.00015860795974731445,
+          "caste/dalit": 3.377880420885049e-05,
+          "caste/gounder": -3.1025636417325586e-05,
+          "caste/mudaliar": 3.6571706004906446e-05,
+          "caste/nadar": 7.41964322514832e-05,
+          "caste/thevar": -0.00011448348959675059,
+          "caste/vanniyar": 1.6680785847711377e-05,
+          "dialect/jaffna": -7.774830010021105e-05,
+          "dialect/kongu": 6.0342252254486084e-05,
+          "dialect/madras": 1.6927718888837262e-06,
+          "dialect/standard": 1.3890862646803726e-05,
+          "region/chennai": 1.6639629620840424e-06,
+          "region/jaffna": -5.6872766435844824e-05,
+          "region/kongu": 1.3348956599656958e-05,
+          "region/madurai": 0.00011185804760316387,
+          "region/nellai": -6.999820470809937e-05,
+          "religion/christian": -3.740191459655762e-05,
+          "religion/hindu": 7.114559412002563e-05,
+          "religion/muslim": -3.374367952346802e-05
+        }
+      }
+    },
+    "test": {
+      "n_pairs": 303,
+      "cf_gap": 0.0009568126988597214,
+      "cf_flip_rate": 0.0,
+      "cf_gap_ci95": [
+        0.0007679268732317723,
+        0.0011690819927025586
+      ],
+      "cf_flip_rate_ci95": [
+        0.0,
+        0.0
+      ],
+      "by_category": {
+        "natural/caste": {
+          "n": 22,
+          "cf_gap": 3.7890942621743307e-05,
+          "cf_flip_rate": 0.0
+        },
+        "natural/dialect": {
+          "n": 8,
+          "cf_gap": 1.589953899383545e-05,
+          "cf_flip_rate": 0.0
+        },
+        "natural/region": {
+          "n": 8,
+          "cf_gap": 0.0,
+          "cf_flip_rate": 0.0
+        },
+        "natural/religion": {
+          "n": 4,
+          "cf_gap": 0.0,
+          "cf_flip_rate": 0.0
+        },
+        "natural/script": {
+          "n": 57,
+          "cf_gap": 0.004634170792996883,
+          "cf_flip_rate": 0.0
+        },
+        "natural/translit_style": {
+          "n": 60,
+          "cf_gap": 0.00013841887994203717,
+          "cf_flip_rate": 0.0
+        },
+        "template/caste": {
+          "n": 84,
+          "cf_gap": 0.00011557127436390147,
+          "cf_flip_rate": 0.0
+        },
+        "template/dialect": {
+          "n": 12,
+          "cf_gap": 0.00017255048442166299,
+          "cf_flip_rate": 0.0
+        },
+        "template/region": {
+          "n": 30,
+          "cf_gap": 7.852911949157715e-05,
+          "cf_flip_rate": 0.0
+        },
+        "template/religion": {
+          "n": 18,
+          "cf_gap": 0.00013145142293069512,
+          "cf_flip_rate": 0.0
+        }
+      },
+      "signed_group_shift": {
+        "caste/brahmin": -0.00014080222172196954,
+        "caste/chettiar": 0.00015860795974731445,
+        "caste/dalit": 1.218804572999943e-05,
+        "caste/gounder": -3.574737274902873e-05,
+        "caste/mudaliar": 2.888321796490345e-05,
+        "caste/nadar": 6.321549153653905e-05,
+        "caste/thevar": -8.586262265453115e-05,
+        "caste/vanniyar": 3.675395419122651e-05,
+        "dialect/jaffna": -7.774830010021105e-05,
+        "dialect/kongu": 6.0342252254486084e-05,
+        "dialect/madras": 1.0435397598484997e-05,
+        "dialect/standard": 6.506840577458206e-07,
+        "region/chennai": 1.2479722499847412e-06,
+        "region/jaffna": -4.874808291788213e-05,
+        "region/kongu": 1.0011717677116394e-05,
+        "region/madurai": 8.948644244810566e-05,
+        "region/nellai": -5.599856376647949e-05,
+        "religion/christian": -3.2058782380772755e-05,
+        "religion/hindu": 5.3359195590019226e-05,
+        "religion/muslim": -2.89231538772583e-05,
+        "script/roman": 0.004634170792996883,
+        "script/tamil_script": -0.004634170792996883,
+        "translit_style/long_style": 8.555948443245143e-05,
+        "translit_style/short_style": -8.555948443245143e-05
+      },
+      "natural_only": {
+        "n_pairs": 159,
+        "cf_gap": 0.0017195827094838023,
+        "cf_flip_rate": 0.0,
+        "by_category": {
+          "natural/caste": {
+            "n": 22,
+            "cf_gap": 3.7890942621743307e-05,
+            "cf_flip_rate": 0.0
+          },
+          "natural/dialect": {
+            "n": 8,
+            "cf_gap": 1.589953899383545e-05,
+            "cf_flip_rate": 0.0
+          },
+          "natural/region": {
+            "n": 8,
+            "cf_gap": 0.0,
+            "cf_flip_rate": 0.0
+          },
+          "natural/religion": {
+            "n": 4,
+            "cf_gap": 0.0,
+            "cf_flip_rate": 0.0
+          },
+          "natural/script": {
+            "n": 57,
+            "cf_gap": 0.004634170792996883,
+            "cf_flip_rate": 0.0
+          },
+          "natural/translit_style": {
+            "n": 60,
+            "cf_gap": 0.00013841887994203717,
+            "cf_flip_rate": 0.0
+          }
+        },
+        "signed_group_shift": {
+          "caste/brahmin": 0.0,
+          "caste/dalit": -6.337960803648457e-05,
+          "caste/gounder": -4.8141926527023315e-05,
+          "caste/mudaliar": -1.1481344699859619e-05,
+          "caste/nadar": 5.5655837059021e-06,
+          "caste/thevar": 0.0,
+          "caste/vanniyar": 7.890760753070936e-05,
+          "dialect/madras": 1.589953899383545e-05,
+          "dialect/standard": -1.589953899383545e-05,
+          "region/chennai": 0.0,
+          "region/jaffna": 0.0,
+          "region/kongu": 0.0,
+          "region/madurai": 0.0,
+          "region/nellai": 0.0,
+          "religion/christian": 0.0,
+          "religion/hindu": 0.0,
+          "religion/muslim": 0.0,
+          "script/roman": 0.004634170792996883,
+          "script/tamil_script": -0.004634170792996883,
+          "translit_style/long_style": 8.555948443245143e-05,
+          "translit_style/short_style": -8.555948443245143e-05
+        }
+      },
+      "template_only": {
+        "n_pairs": 144,
+        "cf_gap": 0.00011458744847914204,
+        "cf_flip_rate": 0.0,
+        "by_category": {
+          "template/caste": {
+            "n": 84,
+            "cf_gap": 0.00011557127436390147,
+            "cf_flip_rate": 0.0
+          },
+          "template/dialect": {
+            "n": 12,
+            "cf_gap": 0.00017255048442166299,
+            "cf_flip_rate": 0.0
+          },
+          "template/region": {
+            "n": 30,
+            "cf_gap": 7.852911949157715e-05,
+            "cf_flip_rate": 0.0
+          },
+          "template/religion": {
+            "n": 18,
+            "cf_gap": 0.00013145142293069512,
+            "cf_flip_rate": 0.0
+          }
+        },
+        "signed_group_shift": {
+          "caste/brahmin": -0.0001743265602272004,
+          "caste/chettiar": 0.00015860795974731445,
+          "caste/dalit": 3.377880420885049e-05,
+          "caste/gounder": -3.1025636417325586e-05,
+          "caste/mudaliar": 3.6571706004906446e-05,
+          "caste/nadar": 7.41964322514832e-05,
+          "caste/thevar": -0.00011448348959675059,
+          "caste/vanniyar": 1.6680785847711377e-05,
+          "dialect/jaffna": -7.774830010021105e-05,
+          "dialect/kongu": 6.0342252254486084e-05,
+          "dialect/madras": 1.6927718888837262e-06,
+          "dialect/standard": 1.3890862646803726e-05,
+          "region/chennai": 1.6639629620840424e-06,
+          "region/jaffna": -5.6872766435844824e-05,
+          "region/kongu": 1.3348956599656958e-05,
+          "region/madurai": 0.00011185804760316387,
+          "region/nellai": -6.999820470809937e-05,
+          "religion/christian": -3.740191459655762e-05,
+          "religion/hindu": 7.114559412002563e-05,
+          "religion/muslim": -3.374367952346802e-05
+        }
+      }
+    }
+  },
+  "templates": {
+    "hasoc_val": {
+      "n_fills": 75,
+      "template_range": 0.00019773095846176147,
+      "template_fped": 0.0,
+      "by_category": {
+        "caste": {
+          "fpr": 0.0,
+          "fped": 0.0,
+          "fpr_by_group": {
+            "brahmin": 0.0,
+            "chettiar": 0.0,
+            "dalit": 0.0,
+            "gounder": 0.0,
+            "mudaliar": 0.0,
+            "nadar": 0.0,
+            "thevar": 0.0,
+            "vanniyar": 0.0
+          },
+          "mean_p_by_group": {
+            "brahmin": 0.48420000076293945,
+            "chettiar": 0.484499990940094,
+            "dalit": 0.4844000041484833,
+            "gounder": 0.4844000041484833,
+            "mudaliar": 0.4844000041484833,
+            "nadar": 0.484499990940094,
+            "thevar": 0.48429998755455017,
+            "vanniyar": 0.4844000041484833
+          }
+        },
+        "dialect": {
+          "fpr": 0.0,
+          "fped": 0.0,
+          "fpr_by_group": {
+            "jaffna": 0.0,
+            "kongu": 0.0,
+            "madras": 0.0,
+            "standard": 0.0
+          },
+          "mean_p_by_group": {
+            "jaffna": 0.48539999127388,
+            "kongu": 0.4855000078678131,
+            "madras": 0.48539999127388,
+            "standard": 0.48539999127388
+          }
+        },
+        "region": {
+          "fpr": 0.0,
+          "fped": 0.0,
+          "fpr_by_group": {
+            "chennai": 0.0,
+            "jaffna": 0.0,
+            "kongu": 0.0,
+            "madurai": 0.0,
+            "nellai": 0.0
+          },
+          "mean_p_by_group": {
+            "chennai": 0.48399999737739563,
+            "jaffna": 0.48399999737739563,
+            "kongu": 0.48399999737739563,
+            "madurai": 0.48410001397132874,
+            "nellai": 0.48399999737739563
+          }
+        },
+        "religion": {
+          "fpr": 0.0,
+          "fped": 0.0,
+          "fpr_by_group": {
+            "christian": 0.0,
+            "hindu": 0.0,
+            "muslim": 0.0
+          },
+          "mean_p_by_group": {
+            "christian": 0.4837000072002411,
+            "hindu": 0.4837999939918518,
+            "muslim": 0.4837000072002411
+          }
+        }
+      }
+    },
+    "test": {
+      "n_fills": 75,
+      "template_range": 0.00019773095846176147,
+      "template_fped": 0.0,
+      "by_category": {
+        "caste": {
+          "fpr": 0.0,
+          "fped": 0.0,
+          "fpr_by_group": {
+            "brahmin": 0.0,
+            "chettiar": 0.0,
+            "dalit": 0.0,
+            "gounder": 0.0,
+            "mudaliar": 0.0,
+            "nadar": 0.0,
+            "thevar": 0.0,
+            "vanniyar": 0.0
+          },
+          "mean_p_by_group": {
+            "brahmin": 0.48420000076293945,
+            "chettiar": 0.484499990940094,
+            "dalit": 0.4844000041484833,
+            "gounder": 0.4844000041484833,
+            "mudaliar": 0.4844000041484833,
+            "nadar": 0.484499990940094,
+            "thevar": 0.48429998755455017,
+            "vanniyar": 0.4844000041484833
+          }
+        },
+        "dialect": {
+          "fpr": 0.0,
+          "fped": 0.0,
+          "fpr_by_group": {
+            "jaffna": 0.0,
+            "kongu": 0.0,
+            "madras": 0.0,
+            "standard": 0.0
+          },
+          "mean_p_by_group": {
+            "jaffna": 0.48539999127388,
+            "kongu": 0.4855000078678131,
+            "madras": 0.48539999127388,
+            "standard": 0.48539999127388
+          }
+        },
+        "region": {
+          "fpr": 0.0,
+          "fped": 0.0,
+          "fpr_by_group": {
+            "chennai": 0.0,
+            "jaffna": 0.0,
+            "kongu": 0.0,
+            "madurai": 0.0,
+            "nellai": 0.0
+          },
+          "mean_p_by_group": {
+            "chennai": 0.48399999737739563,
+            "jaffna": 0.48399999737739563,
+            "kongu": 0.48399999737739563,
+            "madurai": 0.48410001397132874,
+            "nellai": 0.48399999737739563
+          }
+        },
+        "religion": {
+          "fpr": 0.0,
+          "fped": 0.0,
+          "fpr_by_group": {
+            "christian": 0.0,
+            "hindu": 0.0,
+            "muslim": 0.0
+          },
+          "mean_p_by_group": {
+            "christian": 0.4837000072002411,
+            "hindu": 0.4837999939918518,
+            "muslim": 0.4837000072002411
+          }
+        }
+      }
+    }
+  },
+  "groups": {
+    "hasoc_val": {
+      "overall_fpr": 0.0,
+      "overall_fnr": 1.0,
+      "by_category": {
+        "script": {
+          "groups": {
+            "roman": {
+              "n": 247,
+              "fpr": 0.0,
+              "fnr": 1.0,
+              "pred_pos_rate": 0.0
+            },
+            "tamil_script": {
+              "n": 53,
+              "fpr": 0.0,
+              "fnr": 1.0,
+              "pred_pos_rate": 0.0
+            }
+          },
+          "fped": 0.0,
+          "fned": 0.0,
+          "dp_gap": 0.0
+        },
+        "translit_style": {
+          "groups": {
+            "long_style": {
+              "n": 171,
+              "fpr": 0.0,
+              "fnr": 1.0,
+              "pred_pos_rate": 0.0
+            },
+            "short_style": {
+              "n": 72,
+              "fpr": 0.0,
+              "fnr": 1.0,
+              "pred_pos_rate": 0.0
+            }
+          },
+          "fped": 0.0,
+          "fned": 0.0,
+          "dp_gap": 0.0
+        }
+      },
+      "group_fped": 0.0,
+      "group_fned": 0.0
+    },
+    "test": {
+      "overall_fpr": 0.0,
+      "overall_fnr": 1.0,
+      "by_category": {
+        "script": {
+          "groups": {
+            "roman": {
+              "n": 243,
+              "fpr": 0.0,
+              "fnr": 1.0,
+              "pred_pos_rate": 0.0
+            },
+            "tamil_script": {
+              "n": 57,
+              "fpr": 0.0,
+              "fnr": 1.0,
+              "pred_pos_rate": 0.0
+            }
+          },
+          "fped": 0.0,
+          "fned": 0.0,
+          "dp_gap": 0.0
+        },
+        "translit_style": {
+          "groups": {
+            "long_style": {
+              "n": 176,
+              "fpr": 0.0,
+              "fnr": 1.0,
+              "pred_pos_rate": 0.0
+            },
+            "short_style": {
+              "n": 62,
+              "fpr": 0.0,
+              "fnr": 1.0,
+              "pred_pos_rate": 0.0
+            }
+          },
+          "fped": 0.0,
+          "fned": 0.0,
+          "dp_gap": 0.0
+        }
+      },
+      "group_fped": 0.0,
+      "group_fned": 0.0
+    }
+  },
+  "leakage_probe": {
+    "script": {
+      "probe_accuracy": 0.6875,
+      "chance": 0.5
+    },
+    "translit_style": {
+      "probe_accuracy": 0.45000001788139343,
+      "chance": 0.5
+    },
+    "region": {
+      "probe_accuracy": 0.375,
+      "chance": 0.5
+    },
+    "caste": {
+      "probe_accuracy": 0.21212121844291687,
+      "chance": 0.16666666666666666
+    }
+  }
+}

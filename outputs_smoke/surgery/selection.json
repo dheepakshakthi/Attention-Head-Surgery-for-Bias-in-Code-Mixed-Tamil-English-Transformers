@@ -1,0 +1,127 @@
+{
+  "selected": [
+    "L3.H1",
+    "L2.H0",
+    "L0.H1"
+  ],
+  "ranked": [
+    "L3.H1",
+    "L2.H0",
+    "L0.H1",
+    "L4.H2",
+    "L4.H3",
+    "L2.H3"
+  ],
+  "prefix": [
+    {
+      "k": 1,
+      "heads": [
+        "L3.H1"
+      ],
+      "cf_gap": 0.0008938734536059201,
+      "macro_f1": 0.44751381215469616
+    },
+    {
+      "k": 2,
+      "heads": [
+        "L3.H1",
+        "L2.H0"
+      ],
+      "cf_gap": 0.00074691919144243,
+      "macro_f1": 0.44751381215469616
+    },
+    {
+      "k": 3,
+      "heads": [
+        "L3.H1",
+        "L2.H0",
+        "L0.H1"
+      ],
+      "cf_gap": 0.000693674897775054,
+      "macro_f1": 0.44751381215469616
+    }
+  ],
+  "single_ablation": {
+    "L2.H0": {
+      "d_cf_gap": -0.0001431480050086975,
+      "d_macro_f1": 0.0
+    },
+    "L2.H3": {
+      "d_cf_gap": 5.1210285164415836e-05,
+      "d_macro_f1": 0.0
+    },
+    "L0.H1": {
+      "d_cf_gap": -5.0828850362449884e-05,
+      "d_macro_f1": 0.0
+    },
+    "L4.H2": {
+      "d_cf_gap": 2.0250678062438965e-05,
+      "d_macro_f1": 0.0
+    },
+    "L3.H1": {
+      "d_cf_gap": -4.2789208237081766e-05,
+      "d_macro_f1": 0.0
+    },
+    "L4.H3": {
+      "d_cf_gap": -3.7900637835264206e-05,
+      "d_macro_f1": 0.0
+    }
+  },
+  "dev_base": {
+    "cf_gap": 0.0009366626618430018,
+    "cf_flip_rate": 0.0,
+    "macro_f1": 0.44751381215469616,
+    "by_category": {
+      "natural/caste": {
+        "n": 1,
+        "cf_gap": 0.0,
+        "cf_flip_rate": 0.0
+      },
+      "natural/dialect": {
+        "n": 6,
+        "cf_gap": 6.506840236397693e-06,
+        "cf_flip_rate": 0.0
+      },
+      "natural/region": {
+        "n": 2,
+        "cf_gap": 8.684396743774414e-05,
+        "cf_flip_rate": 0.0
+      },
+      "natural/religion": {
+        "n": 1,
+        "cf_gap": 0.0,
+        "cf_flip_rate": 0.0
+      },
+      "natural/script": {
+        "n": 10,
+        "cf_gap": 0.005016782786697149,
+        "cf_flip_rate": 0.0
+      },
+      "natural/translit_style": {
+        "n": 10,
+        "cf_gap": 0.00025522412033751607,
+        "cf_flip_rate": 0.0
+      },
+      "template/caste": {
+        "n": 9,
+        "cf_gap": 0.00015731983876321465,
+        "cf_flip_rate": 0.0
+      },
+      "template/dialect": {
+        "n": 4,
+        "cf_gap": 8.79243016242981e-05,
+        "cf_flip_rate": 0.0
+      },
+      "template/region": {
+        "n": 8,
+        "cf_gap": 6.177648901939392e-05,
+        "cf_flip_rate": 0.0
+      },
+      "template/religion": {
+        "n": 9,
+        "cf_gap": 0.00011168586206622422,
+        "cf_flip_rate": 0.0
+      }
+    }
+  }
+}

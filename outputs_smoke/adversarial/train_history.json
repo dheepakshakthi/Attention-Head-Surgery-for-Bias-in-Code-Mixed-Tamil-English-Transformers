@@ -1,0 +1,62 @@
+{
+  "history": [
+    {
+      "accuracy": 0.755,
+      "macro_f1": 0.4301994301994302,
+      "offensive_f1": 0.0,
+      "epoch": 0,
+      "step": 38,
+      "train_loss": 1.618581069143195
+    }
+  ],
+  "best_dev_macro_f1": 0.4301994301994302,
+  "steps": 38,
+  "adversary_categories": {
+    "script": [
+      "roman",
+      "tamil_script"
+    ],
+    "translit_style": [
+      "long_style",
+      "short_style"
+    ],
+    "dialect": [
+      "madras",
+      "standard"
+    ],
+    "caste": [
+      "dalit",
+      "gounder",
+      "mudaliar",
+      "nadar",
+      "thevar",
+      "vanniyar"
+    ],
+    "religion": [
+      "hindu",
+      "muslim"
+    ]
+  },
+  "post_hoc_probe": {
+    "script": {
+      "probe_accuracy": 0.45000001788139343,
+      "chance": 0.5
+    },
+    "translit_style": {
+      "probe_accuracy": 0.45000001788139343,
+      "chance": 0.5
+    },
+    "dialect": {
+      "probe_accuracy": 0.6363636255264282,
+      "chance": 0.5
+    },
+    "caste": {
+      "probe_accuracy": 0.24390242993831635,
+      "chance": 0.16666666666666666
+    },
+    "religion": {
+      "probe_accuracy": 0.6666666865348816,
+      "chance": 0.5
+    }
+  }
+}

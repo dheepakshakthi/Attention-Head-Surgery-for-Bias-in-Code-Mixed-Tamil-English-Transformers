@@ -1,0 +1,24 @@
+{
+  "name": "adversarial",
+  "n_params": 277453056,
+  "fwd_tokens": 12518971,
+  "bwd_tokens": 12227554,
+  "approx_flops": 2.051714242267085e+16,
+  "wall_seconds": 89509.171398739,
+  "optimizer_steps": 3126,
+  "gpu": "NVIDIA GeForce GTX 1650",
+  "phases": {
+    "adv_train": {
+      "wall_seconds": 89280.092413406,
+      "fwd_tokens": 12227554,
+      "bwd_tokens": 12227554,
+      "approx_flops": 2.0355433348230144e+16
+    },
+    "adv_train_dev_eval": {
+      "wall_seconds": 229.07898533299158,
+      "fwd_tokens": 291417,
+      "bwd_tokens": 0,
+      "approx_flops": 161709074440704.0
+    }
+  }
+}

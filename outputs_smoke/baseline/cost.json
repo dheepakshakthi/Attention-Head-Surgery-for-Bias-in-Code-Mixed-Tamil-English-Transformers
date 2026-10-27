@@ -1,0 +1,24 @@
+{
+  "name": "baseline",
+  "n_params": 86873,
+  "fwd_tokens": 33637,
+  "bwd_tokens": 24887,
+  "approx_flops": 14492327606.0,
+  "wall_seconds": 1.0300926259988046,
+  "optimizer_steps": 38,
+  "gpu": "NVIDIA GeForce GTX 1650",
+  "phases": {
+    "train": {
+      "wall_seconds": 1.002763126998616,
+      "fwd_tokens": 24887,
+      "bwd_tokens": 24887,
+      "approx_flops": 12972050106.0
+    },
+    "train_dev_eval": {
+      "wall_seconds": 0.027329499000188662,
+      "fwd_tokens": 8750,
+      "bwd_tokens": 0,
+      "approx_flops": 1520277500.0
+    }
+  }
+}

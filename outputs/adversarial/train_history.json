@@ -1,0 +1,94 @@
+{
+  "history": [
+    {
+      "accuracy": 0.7860531309297912,
+      "macro_f1": 0.7450938281158042,
+      "offensive_f1": 0.6429136975455265,
+      "epoch": 0,
+      "step": 1042,
+      "train_loss": 1.8089548045995854
+    },
+    {
+      "accuracy": 0.7611480075901328,
+      "macro_f1": 0.7306334363189867,
+      "offensive_f1": 0.6399713979263496,
+      "epoch": 1,
+      "step": 2084,
+      "train_loss": 1.693152144047304
+    },
+    {
+      "accuracy": 0.8213946869070209,
+      "macro_f1": 0.7793141993170147,
+      "offensive_f1": 0.6829473684210526,
+      "epoch": 2,
+      "step": 3126,
+      "train_loss": 1.6487764995084961
+    }
+  ],
+  "best_dev_macro_f1": 0.7793141993170147,
+  "steps": 3126,
+  "adversary_categories": {
+    "script": [
+      "roman",
+      "tamil_script"
+    ],
+    "translit_style": [
+      "long_style",
+      "short_style"
+    ],
+    "caste": [
+      "brahmin",
+      "chettiar",
+      "dalit",
+      "gounder",
+      "mudaliar",
+      "nadar",
+      "thevar",
+      "vanniyar"
+    ],
+    "religion": [
+      "christian",
+      "hindu",
+      "muslim"
+    ],
+    "dialect": [
+      "jaffna",
+      "kongu",
+      "madras",
+      "standard"
+    ],
+    "region": [
+      "chennai",
+      "jaffna",
+      "kongu",
+      "madurai",
+      "nellai"
+    ]
+  },
+  "post_hoc_probe": {
+    "script": {
+      "probe_accuracy": 0.9666666984558105,
+      "chance": 0.5
+    },
+    "translit_style": {
+      "probe_accuracy": 0.6833333969116211,
+      "chance": 0.5
+    },
+    "caste": {
+      "probe_accuracy": 0.21666668355464935,
+      "chance": 0.125
+    },
+    "religion": {
+      "probe_accuracy": 0.5333333611488342,
+      "chance": 0.3333333333333333
+    },
+    "dialect": {
+      "probe_accuracy": 0.42241379618644714,
+      "chance": 0.25
+    },
+    "region": {
+      "probe_accuracy": 0.1666666716337204,
+      "chance": 0.2
+    }
+  }
+}

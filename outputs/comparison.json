@@ -1,0 +1,294 @@
+{
+  "bias_table": {
+    "CF gap (all pairs)": {
+      "baseline": 0.09797025471925735,
+      "surgery": 0.08157723397016525,
+      "adversarial": 0.10328179597854614,
+      "gain_adv": -0.005311541259288788,
+      "gain_surgery": 0.016393020749092102,
+      "recovery": -3.0863020635345904
+    },
+    "CF gap (natural pairs)": {
+      "baseline": 0.10119817405939102,
+      "surgery": 0.08460705727338791,
+      "adversarial": 0.10772824287414551,
+      "gain_adv": -0.006530068814754486,
+      "gain_surgery": 0.016591116786003113,
+      "recovery": -2.540726178645469
+    },
+    "CF gap (template pairs)": {
+      "baseline": 0.03473450243473053,
+      "surgery": 0.022221973165869713,
+      "adversarial": 0.01617463305592537,
+      "gain_adv": 0.01855986937880516,
+      "gain_surgery": 0.012512529268860817,
+      "recovery": 0.6741711923441535
+    },
+    "CF flip rate": {
+      "baseline": 0.11568296795952783,
+      "surgery": 0.11298482293423272,
+      "adversarial": 0.11703204047217539,
+      "gain_adv": -0.0013490725126475561,
+      "gain_surgery": 0.0026981450252951122,
+      "recovery": -2.0
+    },
+    "Template FPED": {
+      "baseline": 0.18888888888888888,
+      "surgery": 0.05555555555555555,
+      "adversarial": 0.0,
+      "gain_adv": 0.18888888888888888,
+      "gain_surgery": 0.13333333333333333,
+      "recovery": 0.7058823529411765
+    },
+    "Template range": {
+      "baseline": 0.08517002314329147,
+      "surgery": 0.054429810494184494,
+      "adversarial": 0.04473131150007248,
+      "gain_adv": 0.040438711643218994,
+      "gain_surgery": 0.03074021264910698,
+      "recovery": 0.7601679529338241
+    },
+    "Group FPED (real)": {
+      "baseline": 0.15649393472974318,
+      "surgery": 0.13345330226118995,
+      "adversarial": 0.14769237484866807,
+      "gain_adv": 0.008801559881075116,
+      "gain_surgery": 0.02304063246855323,
+      "recovery": 2.6177896622727745
+    },
+    "Group FNED (real)": {
+      "baseline": 0.4034403448854555,
+      "surgery": 0.370164404198936,
+      "adversarial": 0.393400484148365,
+      "gain_adv": 0.010039860737090511,
+      "gain_surgery": 0.03327594068651951,
+      "recovery": 3.314382694929957
+    }
+  },
+  "task": {
+    "hasoc_val": {
+      "baseline": {
+        "accuracy": 0.8369098712446352,
+        "macro_f1": 0.7879027428434544,
+        "offensive_f1": 0.6859504132231405
+      },
+      "surgery": {
+        "accuracy": 0.8465665236051502,
+        "macro_f1": 0.795128624901043,
+        "offensive_f1": 0.6924731182795699
+      },
+      "adversarial": {
+        "accuracy": 0.8379828326180258,
+        "macro_f1": 0.7866969800310712,
+        "offensive_f1": 0.6821052631578948
+      }
+    },
+    "test": {
+      "baseline": {
+        "accuracy": 0.8161625708884688,
+        "macro_f1": 0.7746712831563825,
+        "offensive_f1": 0.6779801324503312
+      },
+      "surgery": {
+        "accuracy": 0.8277410207939508,
+        "macro_f1": 0.7810070969922271,
+        "offensive_f1": 0.6798418972332015
+      },
+      "adversarial": {
+        "accuracy": 0.8142722117202268,
+        "macro_f1": 0.7715562556332276,
+        "offensive_f1": 0.6727726894254787
+      }
+    }
+  },
+  "cost": {
+    "surgery_flops": 968418240761856.0,
+    "adversarial_flops": 2.051714242267085e+16,
+    "surgery_wall_s": 1351.224558075006,
+    "adversarial_wall_s": 89509.171398739,
+    "ratio_flops": 0.04720044442893675,
+    "ratio_wall": 0.015095934159145194,
+    "surgery_phases": {
+      "screen": {
+        "wall_seconds": 53.956990925002174,
+        "fwd_tokens": 27096,
+        "bwd_tokens": 13331,
+        "approx_flops": 29894140858368.0
+      },
+      "exact": {
+        "wall_seconds": 152.86337779099995,
+        "fwd_tokens": 219725,
+        "bwd_tokens": 0,
+        "approx_flops": 122186281113600.0
+      },
+      "ablate": {
+        "wall_seconds": 584.5861174860001,
+        "fwd_tokens": 799300,
+        "bwd_tokens": 0,
+        "approx_flops": 444480575692800.0
+      },
+      "select": {
+        "wall_seconds": 257.20818329000394,
+        "fwd_tokens": 351692,
+        "bwd_tokens": 0,
+        "approx_flops": 195571453304832.0
+      },
+      "gates": {
+        "wall_seconds": 293.52900951500123,
+        "fwd_tokens": 103766,
+        "bwd_tokens": 103766,
+        "approx_flops": 173108863070208.0
+      },
+      "report": {
+        "wall_seconds": 9.080879067998467,
+        "fwd_tokens": 5713,
+        "bwd_tokens": 0,
+        "approx_flops": 3176926722048.0
+      }
+    },
+    "ratio_flops_incl_full_analysis": 0.16405548209461465,
+    "ratio_wall_incl_full_analysis": 0.0468980030083615,
+    "baseline_flops": 4032289077050880.0,
+    "surgery_vs_baseline_flops": 0.2401658765670972
+  },
+  "verdict": {
+    "recovery": -3.0863020635345904,
+    "recovery_ci95": [
+      -11.337425088882446,
+      -1.6577381521463397
+    ],
+    "recovery_threshold": 0.8,
+    "recovers_most": false,
+    "adversarial_gain_positive": false,
+    "cost_ratio_flops": 0.04720044442893675,
+    "cost_target": 0.05,
+    "cost_about_5pct": true,
+    "surgery_f1_drop": -0.006335813835844695,
+    "adversarial_f1_drop": 0.003115027523154845,
+    "surgery_task_preserved": true,
+    "names_what_was_removed": true,
+    "claim_supported": false
+  },
+  "removed": [
+    {
+      "head": "L11.H3",
+      "gate": 0.054925739765167236,
+      "primary_proxy_category": "region"
+    },
+    {
+      "head": "L4.H6",
+      "gate": 0.09550899267196655,
+      "primary_proxy_category": "dialect"
+    },
+    {
+      "head": "L3.H11",
+      "gate": 0.5621413588523865,
+      "primary_proxy_category": "translit_style"
+    },
+    {
+      "head": "L11.H0",
+      "gate": 0.06404707580804825,
+      "primary_proxy_category": "caste"
+    },
+    {
+      "head": "L11.H7",
+      "gate": 0.06306371837854385,
+      "primary_proxy_category": "caste"
+    },
+    {
+      "head": "L7.H9",
+      "gate": 0.18639235198497772,
+      "primary_proxy_category": "translit_style"
+    },
+    {
+      "head": "L10.H1",
+      "gate": 0.06931661814451218,
+      "primary_proxy_category": "dialect"
+    },
+    {
+      "head": "L11.H9",
+      "gate": 0.06196695938706398,
+      "primary_proxy_category": "translit_style"
+    }
+  ],
+  "leakage_probe": {
+    "baseline": {
+      "script": {
+        "probe_accuracy": 0.98333340883255,
+        "chance": 0.5
+      },
+      "translit_style": {
+        "probe_accuracy": 0.5333333611488342,
+        "chance": 0.5
+      },
+      "dialect": {
+        "probe_accuracy": 0.4054054021835327,
+        "chance": 0.3333333333333333
+      },
+      "caste": {
+        "probe_accuracy": 0.2651515305042267,
+        "chance": 0.125
+      },
+      "region": {
+        "probe_accuracy": 0.5208333730697632,
+        "chance": 0.2
+      },
+      "religion": {
+        "probe_accuracy": 0.15000000596046448,
+        "chance": 0.3333333333333333
+      }
+    },
+    "surgery": {
+      "script": {
+        "probe_accuracy": 0.9666666984558105,
+        "chance": 0.5
+      },
+      "translit_style": {
+        "probe_accuracy": 0.5,
+        "chance": 0.5
+      },
+      "dialect": {
+        "probe_accuracy": 0.36486488580703735,
+        "chance": 0.3333333333333333
+      },
+      "caste": {
+        "probe_accuracy": 0.25757575035095215,
+        "chance": 0.125
+      },
+      "region": {
+        "probe_accuracy": 0.4791666865348816,
+        "chance": 0.2
+      },
+      "religion": {
+        "probe_accuracy": 0.25,
+        "chance": 0.3333333333333333
+      }
+    },
+    "adversarial": {
+      "script": {
+        "probe_accuracy": 1.0,
+        "chance": 0.5
+      },
+      "translit_style": {
+        "probe_accuracy": 0.6000000238418579,
+        "chance": 0.5
+      },
+      "dialect": {
+        "probe_accuracy": 0.31081080436706543,
+        "chance": 0.3333333333333333
+      },
+      "caste": {
+        "probe_accuracy": 0.2878788113594055,
+        "chance": 0.125
+      },
+      "region": {
+        "probe_accuracy": 0.1458333432674408,
+        "chance": 0.2
+      },
+      "religion": {
+        "probe_accuracy": 0.15000000596046448,
+        "chance": 0.3333333333333333
+      }
+    }
+  }
+}

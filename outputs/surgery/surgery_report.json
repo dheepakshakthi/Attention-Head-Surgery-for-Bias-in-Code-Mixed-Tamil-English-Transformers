@@ -1,0 +1,834 @@
+{
+  "heads": [
+    {
+      "head": "L11.H3",
+      "gate": 0.054925739765167236,
+      "primary_proxy_category": "region",
+      "per_category": {
+        "caste": {
+          "nie_oriented": 0.043741861979166664,
+          "nde_oriented": 0.16379801432291666,
+          "nie_share_of_te": 0.21171836533727229
+        },
+        "dialect": {
+          "nie_oriented": 0.09212779998779297,
+          "nde_oriented": 0.3923714955647786,
+          "nie_share_of_te": 0.18960427715123515
+        },
+        "region": {
+          "nie_oriented": 0.029741287231445312,
+          "nde_oriented": 0.09954166412353516,
+          "nie_share_of_te": 0.22933411773357357
+        },
+        "religion": {
+          "nie_oriented": 0.09584768613179524,
+          "nde_oriented": 0.46823398272196454,
+          "nie_share_of_te": 0.1683796051262083
+        },
+        "script": {
+          "nie_oriented": 0.4017740885416667,
+          "nde_oriented": 1.769879659016927,
+          "nie_share_of_te": 0.18647390237043546
+        },
+        "translit_style": {
+          "nie_oriented": 0.12537447611490884,
+          "nde_oriented": 0.6499792734781901,
+          "nie_share_of_te": 0.16190997561665998
+        }
+      },
+      "dev_single_ablation": {
+        "d_cf_gap": -0.0005830153822898865,
+        "d_macro_f1": -0.005772433016295042
+      },
+      "proxy_attention_ratio": 0.07342765935713222,
+      "top_mediated_swaps": [
+        {
+          "swap": "script:tamil_script->roman",
+          "mean_oriented_nie": 0.4017740885416667,
+          "n": 24
+        },
+        {
+          "swap": "religion:christian->hindu",
+          "mean_oriented_nie": 0.25809478759765625,
+          "n": 2
+        },
+        {
+          "swap": "caste:thevar->dalit",
+          "mean_oriented_nie": 0.173828125,
+          "n": 2
+        },
+        {
+          "swap": "region:kongu->nellai",
+          "mean_oriented_nie": 0.12835693359375,
+          "n": 3
+        },
+        {
+          "swap": "translit_style:long_style->short_style",
+          "mean_oriented_nie": 0.12537447611490884,
+          "n": 24
+        }
+      ],
+      "examples": [
+        {
+          "text_a": "உண்மையை சொல்ல யாருமே இல்லையேனு பார்த்தேன்.... சபாஷ்.... மோகன்",
+          "text_b": "unmaiyai solla yaarumae illaiyaenu paartthaen.... sapaash.... mokan",
+          "te": 6.9755859375,
+          "nie": 1.39111328125
+        },
+        {
+          "text_a": "Dir மோகன் Bro, என் குலதெய்வமும் திரௌபதி தான்.",
+          "text_b": "Dir mokan Bro, en kulatheyvamum thiraupathi thaan.",
+          "te": 6.71142578125,
+          "nie": 0.9951171875
+        },
+        {
+          "text_a": "குருமாவளவன் மற்றும் விசிக பொறுக்கிகள் செய்யும் ஈன செயல்களுக்கு ஏழை பாவப்பட்ட பறையர் சமுதாயத்தை விமர்சிக்க வேண்டாம் நண்பர்களே Appreciate the movie!!",
+          "text_b": "kurumaavalavan marrum visika porukkikal seyyum eena seyalkalukku aezhai paavappadda paraiyar samuthaayatthai vimarsikka vaendaam nanparkalae Appreciate the movie!!",
+          "te": -2.93536376953125,
+          "nie": -0.984619140625
+        }
+      ]
+    },
+    {
+      "head": "L4.H6",
+      "gate": 0.09550899267196655,
+      "primary_proxy_category": "dialect",
+      "per_category": {
+        "caste": {
+          "nie_oriented": 0.010945638020833334,
+          "nde_oriented": 0.17740885416666666,
+          "nie_share_of_te": 0.052978828163466274
+        },
+        "dialect": {
+          "nie_oriented": 0.05515480041503906,
+          "nde_oriented": 0.3946539560953776,
+          "nie_share_of_te": 0.11351173115498
+        },
+        "region": {
+          "nie_oriented": 0.009547869364420572,
+          "nde_oriented": 0.10670153299967448,
+          "nie_share_of_te": 0.07362331629714061
+        },
+        "religion": {
+          "nie_oriented": 0.056476195653279625,
+          "nde_oriented": 0.5080002943674723,
+          "nie_share_of_te": 0.09921407502789124
+        },
+        "script": {
+          "nie_oriented": 0.0860748291015625,
+          "nde_oriented": 2.0167566935221353,
+          "nie_share_of_te": 0.0399495879306117
+        },
+        "translit_style": {
+          "nie_oriented": 0.05674934387207031,
+          "nde_oriented": 0.7355904579162598,
+          "nie_share_of_te": 0.07328672603319246
+        }
+      },
+      "dev_single_ablation": {
+        "d_cf_gap": -0.0026901215314865112,
+        "d_macro_f1": 0.014457676722880453
+      },
+      "proxy_attention_ratio": 0.40228238912661457,
+      "top_mediated_swaps": [
+        {
+          "swap": "religion:christian->hindu",
+          "mean_oriented_nie": 0.10056304931640625,
+          "n": 2
+        },
+        {
+          "swap": "script:tamil_script->roman",
+          "mean_oriented_nie": 0.0860748291015625,
+          "n": 24
+        },
+        {
+          "swap": "religion:hindu->muslim",
+          "mean_oriented_nie": 0.07790883382161458,
+          "n": 12
+        },
+        {
+          "swap": "dialect:standard->madras",
+          "mean_oriented_nie": 0.0630645751953125,
+          "n": 20
+        },
+        {
+          "swap": "translit_style:long_style->short_style",
+          "mean_oriented_nie": 0.05674934387207031,
+          "n": 24
+        }
+      ],
+      "examples": [
+        {
+          "text_a": "Dir மோகன் Bro, என் குலதெய்வமும் திரௌபதி தான்.",
+          "text_b": "Dir mokan Bro, en kulatheyvamum thiraupathi thaan.",
+          "te": 6.71142578125,
+          "nie": 1.099609375
+        },
+        {
+          "text_a": "உண்மையை சொல்ல யாருமே இல்லையேனு பார்த்தேன்.... சபாஷ்.... மோகன்",
+          "text_b": "unmaiyai solla yaarumae illaiyaenu paartthaen.... sapaash.... mokan",
+          "te": 6.9755859375,
+          "nie": 0.724609375
+        },
+        {
+          "text_a": "இது சும்மா ட்ரெய்லர் தாமா இன்னும் மெயின் ஃப்க்சர பாக்கலயே பாத்த ஆடிப்போயிருவ",
+          "text_b": "ithu summaa dreylar thaamaa innum meyin hpksara paakkalayae paattha aadippoyiruva",
+          "te": -0.0386962890625,
+          "nie": 0.6546630859375
+        }
+      ]
+    },
+    {
+      "head": "L3.H11",
+      "gate": 0.5621413588523865,
+      "primary_proxy_category": "translit_style",
+      "per_category": {
+        "caste": {
+          "nie_oriented": 0.020792643229166668,
+          "nde_oriented": 0.18672688802083334,
+          "nie_share_of_te": 0.10064007877892664
+        },
+        "dialect": {
+          "nie_oriented": 0.015338897705078125,
+          "nde_oriented": 0.44376246134440106,
+          "nie_share_of_te": 0.03156832804054187
+        },
+        "region": {
+          "nie_oriented": 0.0167083740234375,
+          "nde_oriented": 0.13134193420410156,
+          "nie_share_of_te": 0.12883773945655771
+        },
+        "religion": {
+          "nie_oriented": 0.0033616224924723306,
+          "nde_oriented": 0.5361915429433187,
+          "nie_share_of_te": 0.005905501642340684
+        },
+        "script": {
+          "nie_oriented": 0.0334618886311849,
+          "nde_oriented": 2.128421147664388,
+          "nie_share_of_te": 0.015530540997281985
+        },
+        "translit_style": {
+          "nie_oriented": 0.10124588012695312,
+          "nde_oriented": 0.7075862884521484,
+          "nie_share_of_te": 0.1307500417199584
+        }
+      },
+      "dev_single_ablation": {
+        "d_cf_gap": -0.002233605831861496,
+        "d_macro_f1": 0.007189946765297495
+      },
+      "proxy_attention_ratio": 0.9479088660530269,
+      "top_mediated_swaps": [
+        {
+          "swap": "translit_style:long_style->short_style",
+          "mean_oriented_nie": 0.10124588012695312,
+          "n": 24
+        },
+        {
+          "swap": "region:madurai->chennai",
+          "mean_oriented_nie": 0.07682291666666667,
+          "n": 3
+        },
+        {
+          "swap": "dialect:standard->jaffna",
+          "mean_oriented_nie": 0.04366302490234375,
+          "n": 4
+        },
+        {
+          "swap": "script:tamil_script->roman",
+          "mean_oriented_nie": 0.0334618886311849,
+          "n": 24
+        },
+        {
+          "swap": "religion:christian->hindu",
+          "mean_oriented_nie": 0.02822113037109375,
+          "n": 2
+        }
+      ],
+      "examples": [
+        {
+          "text_a": "fire engine aa kupdunga anga yeriyudhu mavu thala fansukku",
+          "text_b": "fire engine a kupdunga anga yeriyudu mavu tala fansukku",
+          "te": 1.824951171875,
+          "nie": 0.528076171875
+        },
+        {
+          "text_a": "பகுத்தறிவு என்பது சிறிதும் எதிர்பார்க்காத முடியவில்லை......ஏன்?",
+          "text_b": "pakuttharivu enpathu sirithum ethirpaarkkaatha mudiyavillai......aen?",
+          "te": 4.4143218994140625,
+          "nie": 0.46484375
+        },
+        {
+          "text_a": "Hey naathan 56 comment uh naanthan",
+          "text_b": "Hey natan 56 comment uh nantan",
+          "te": -1.63330078125,
+          "nie": -0.39892578125
+        }
+      ]
+    },
+    {
+      "head": "L11.H0",
+      "gate": 0.06404707580804825,
+      "primary_proxy_category": "caste",
+      "per_category": {
+        "caste": {
+          "nie_oriented": 0.037455240885416664,
+          "nde_oriented": 0.17043050130208334,
+          "nie_share_of_te": 0.1812900049236829
+        },
+        "dialect": {
+          "nie_oriented": 0.06148719787597656,
+          "nde_oriented": 0.42368125915527344,
+          "nie_share_of_te": 0.12654416700359963
+        },
+        "region": {
+          "nie_oriented": 0.013622601826985678,
+          "nde_oriented": 0.1155408223470052,
+          "nie_share_of_te": 0.10504344841955608
+        },
+        "religion": {
+          "nie_oriented": 0.07900325457255046,
+          "nde_oriented": 0.4894767602284749,
+          "nie_share_of_te": 0.13878829365082135
+        },
+        "script": {
+          "nie_oriented": 0.3249715169270833,
+          "nde_oriented": 1.883679707845052,
+          "nie_share_of_te": 0.150827812566486
+        },
+        "translit_style": {
+          "nie_oriented": 0.09501981735229492,
+          "nde_oriented": 0.6795012156168619,
+          "nie_share_of_te": 0.12270963586327677
+        }
+      },
+      "dev_single_ablation": {
+        "d_cf_gap": -8.520111441612244e-05,
+        "d_macro_f1": 0.00487438547893182
+      },
+      "proxy_attention_ratio": 0.05634863899525317,
+      "top_mediated_swaps": [
+        {
+          "swap": "script:tamil_script->roman",
+          "mean_oriented_nie": 0.3249715169270833,
+          "n": 24
+        },
+        {
+          "swap": "religion:christian->hindu",
+          "mean_oriented_nie": 0.24100494384765625,
+          "n": 2
+        },
+        {
+          "swap": "translit_style:long_style->short_style",
+          "mean_oriented_nie": 0.09501981735229492,
+          "n": 24
+        },
+        {
+          "swap": "caste:nadar->gounder",
+          "mean_oriented_nie": 0.09375,
+          "n": 2
+        },
+        {
+          "swap": "caste:thevar->dalit",
+          "mean_oriented_nie": 0.0888671875,
+          "n": 2
+        }
+      ],
+      "examples": [
+        {
+          "text_a": "உண்மையை சொல்ல யாருமே இல்லையேனு பார்த்தேன்.... சபாஷ்.... மோகன்",
+          "text_b": "unmaiyai solla yaarumae illaiyaenu paartthaen.... sapaash.... mokan",
+          "te": 6.9755859375,
+          "nie": 1.0244140625
+        },
+        {
+          "text_a": "Dir மோகன் Bro, என் குலதெய்வமும் திரௌபதி தான்.",
+          "text_b": "Dir mokan Bro, en kulatheyvamum thiraupathi thaan.",
+          "te": 6.71142578125,
+          "nie": 0.8525390625
+        },
+        {
+          "text_a": "தேவேந்திர குல வேளாளர் சார்பாக முழு ஆதரவு.....உன்மையை உணர்வு பூர்வமாக எடுத்த இயக்குனர்க்கு நன்றி தேவதையாவே இருந்தாலும் தேவேந்திரர் வீட்டு பொன்னு போதும் .... என்றும் எட்வின் பாண்டியன் மிராசுதார்",
+          "text_b": "thaevaenthira kula vaelaalar saarpaaka muzhu aatharavu.....unmaiyai unarvu poorvamaaka eduttha iyakkunarkku nanri thaevathaiyaavae irunthaalum thaevaenthirar veeddu ponnu pothum .... enrum edvin paandiyan miraasuthaar",
+          "te": 5.627197265625,
+          "nie": 0.798828125
+        }
+      ]
+    },
+    {
+      "head": "L11.H7",
+      "gate": 0.06306371837854385,
+      "primary_proxy_category": "caste",
+      "per_category": {
+        "caste": {
+          "nie_oriented": 0.02264404296875,
+          "nde_oriented": 0.18288167317708334,
+          "nie_share_of_te": 0.10960118168389955
+        },
+        "dialect": {
+          "nie_oriented": 0.05303001403808594,
+          "nde_oriented": 0.43163617451985675,
+          "nie_share_of_te": 0.10913879936722028
+        },
+        "region": {
+          "nie_oriented": 0.0051746368408203125,
+          "nde_oriented": 0.12208048502604167,
+          "nie_share_of_te": 0.03990145971982204
+        },
+        "religion": {
+          "nie_oriented": 0.053176482518514,
+          "nde_oriented": 0.5206027825673422,
+          "nie_share_of_te": 0.09341733212167631
+        },
+        "script": {
+          "nie_oriented": 0.2118377685546875,
+          "nde_oriented": 2.0033483505249023,
+          "nie_share_of_te": 0.0983194698175292
+        },
+        "translit_style": {
+          "nie_oriented": 0.07700220743815105,
+          "nde_oriented": 0.6987031300862631,
+          "nie_share_of_te": 0.09944149650773672
+        }
+      },
+      "dev_single_ablation": {
+        "d_cf_gap": -0.0011316277086734772,
+        "d_macro_f1": 0.010747888336787637
+      },
+      "proxy_attention_ratio": 0.24410319938665406,
+      "top_mediated_swaps": [
+        {
+          "swap": "script:tamil_script->roman",
+          "mean_oriented_nie": 0.2118377685546875,
+          "n": 24
+        },
+        {
+          "swap": "religion:christian->hindu",
+          "mean_oriented_nie": 0.17740631103515625,
+          "n": 2
+        },
+        {
+          "swap": "translit_style:long_style->short_style",
+          "mean_oriented_nie": 0.07700220743815105,
+          "n": 24
+        },
+        {
+          "swap": "dialect:standard->madras",
+          "mean_oriented_nie": 0.055535888671875,
+          "n": 20
+        },
+        {
+          "swap": "religion:hindu->muslim",
+          "mean_oriented_nie": 0.04962921142578125,
+          "n": 12
+        }
+      ],
+      "examples": [
+        {
+          "text_a": "Dir மோகன் Bro, என் குலதெய்வமும் திரௌபதி தான்.",
+          "text_b": "Dir mokan Bro, en kulatheyvamum thiraupathi thaan.",
+          "te": 6.71142578125,
+          "nie": 0.73046875
+        },
+        {
+          "text_a": "உண்மையை சொல்ல யாருமே இல்லையேனு பார்த்தேன்.... சபாஷ்.... மோகன்",
+          "text_b": "unmaiyai solla yaarumae illaiyaenu paartthaen.... sapaash.... mokan",
+          "te": 6.9755859375,
+          "nie": 0.7158203125
+        },
+        {
+          "text_a": "பகுத்தறிவு என்பது சிறிதும் எதிர்பார்க்காத முடியவில்லை......ஏன்?",
+          "text_b": "pakuttharivu enpathu sirithum ethirpaarkkaatha mudiyavillai......aen?",
+          "te": 4.4143218994140625,
+          "nie": 0.6904296875
+        }
+      ]
+    },
+    {
+      "head": "L7.H9",
+      "gate": 0.18639235198497772,
+      "primary_proxy_category": "translit_style",
+      "per_category": {
+        "caste": {
+          "nie_oriented": 0.0026448567708333335,
+          "nde_oriented": 0.19464111328125,
+          "nie_share_of_te": 0.012801575578532743
+        },
+        "dialect": {
+          "nie_oriented": 0.022150675455729168,
+          "nde_oriented": 0.4598217010498047,
+          "nie_share_of_te": 0.04558735592027185
+        },
+        "region": {
+          "nie_oriented": 0.007114410400390625,
+          "nde_oriented": 0.11979866027832031,
+          "nie_share_of_te": 0.05485899180056624
+        },
+        "religion": {
+          "nie_oriented": 0.03710198402404785,
+          "nde_oriented": 0.5485657850901285,
+          "nie_share_of_te": 0.06517859399107284
+        },
+        "script": {
+          "nie_oriented": 0.1213836669921875,
+          "nde_oriented": 2.051027297973633,
+          "nie_share_of_te": 0.0563373465676327
+        },
+        "translit_style": {
+          "nie_oriented": 0.08416493733723958,
+          "nde_oriented": 0.7111784617106119,
+          "nie_share_of_te": 0.10869152457762263
+        }
+      },
+      "dev_single_ablation": {
+        "d_cf_gap": -0.002167496830224991,
+        "d_macro_f1": 0.004784889961062189
+      },
+      "proxy_attention_ratio": 0.3140252363387502,
+      "top_mediated_swaps": [
+        {
+          "swap": "religion:christian->hindu",
+          "mean_oriented_nie": 0.16458892822265625,
+          "n": 2
+        },
+        {
+          "swap": "script:tamil_script->roman",
+          "mean_oriented_nie": 0.1213836669921875,
+          "n": 24
+        },
+        {
+          "swap": "translit_style:long_style->short_style",
+          "mean_oriented_nie": 0.08416493733723958,
+          "n": 24
+        },
+        {
+          "swap": "region:chennai->nellai",
+          "mean_oriented_nie": 0.03411865234375,
+          "n": 2
+        },
+        {
+          "swap": "dialect:standard->jaffna",
+          "mean_oriented_nie": 0.0291900634765625,
+          "n": 4
+        }
+      ],
+      "examples": [
+        {
+          "text_a": "Dir மோகன் Bro, என் குலதெய்வமும் திரௌபதி தான்.",
+          "text_b": "Dir mokan Bro, en kulatheyvamum thiraupathi thaan.",
+          "te": 6.71142578125,
+          "nie": 0.7705078125
+        },
+        {
+          "text_a": "உண்மையை சொல்ல யாருமே இல்லையேனு பார்த்தேன்.... சபாஷ்.... மோகன்",
+          "text_b": "unmaiyai solla yaarumae illaiyaenu paartthaen.... sapaash.... mokan",
+          "te": 6.9755859375,
+          "nie": 0.419921875
+        },
+        {
+          "text_a": "வேலைக்கு ஆட்கள் தேவை இடம் : சென்னை வயது :18 to 28 வருமானம் :15000 to 25000 நிரந்தர வேலை தங்குமிடம் இலவசம் , 7538889725",
+          "text_b": "vaelaikku aadkal thaevai idam : sennai vayathu :18 to 28 varumaanam :15000 to 25000 niranthara vaelai thangumidam ilavasam , 7538889725",
+          "te": 3.505462646484375,
+          "nie": 0.375
+        }
+      ]
+    },
+    {
+      "head": "L10.H1",
+      "gate": 0.06931661814451218,
+      "primary_proxy_category": "dialect",
+      "per_category": {
+        "caste": {
+          "nie_oriented": 0.014628092447916666,
+          "nde_oriented": 0.19091796875,
+          "nie_share_of_te": 0.07080256031511571
+        },
+        "dialect": {
+          "nie_oriented": 0.044825236002604164,
+          "nde_oriented": 0.44068018595377606,
+          "nie_share_of_te": 0.09225289729629295
+        },
+        "region": {
+          "nie_oriented": 0.008077621459960938,
+          "nde_oriented": 0.11913617451985677,
+          "nie_share_of_te": 0.062286281575173734
+        },
+        "religion": {
+          "nie_oriented": 0.03767800331115723,
+          "nde_oriented": 0.524187962214152,
+          "nie_share_of_te": 0.06619051096082829
+        },
+        "script": {
+          "nie_oriented": 0.15020243326822916,
+          "nde_oriented": 2.016895294189453,
+          "nie_share_of_te": 0.06971289258281002
+        },
+        "translit_style": {
+          "nie_oriented": 0.05721886952718099,
+          "nde_oriented": 0.7127861976623535,
+          "nie_share_of_te": 0.07389307662165427
+        }
+      },
+      "dev_single_ablation": {
+        "d_cf_gap": -0.0013647973537445068,
+        "d_macro_f1": 0.012026160852217083
+      },
+      "proxy_attention_ratio": 1.085374327574822,
+      "top_mediated_swaps": [
+        {
+          "swap": "script:tamil_script->roman",
+          "mean_oriented_nie": 0.15020243326822916,
+          "n": 24
+        },
+        {
+          "swap": "religion:christian->hindu",
+          "mean_oriented_nie": 0.11777496337890625,
+          "n": 2
+        },
+        {
+          "swap": "translit_style:long_style->short_style",
+          "mean_oriented_nie": 0.05721886952718099,
+          "n": 24
+        },
+        {
+          "swap": "dialect:standard->madras",
+          "mean_oriented_nie": 0.0466094970703125,
+          "n": 20
+        },
+        {
+          "swap": "religion:hindu->muslim",
+          "mean_oriented_nie": 0.0426788330078125,
+          "n": 12
+        }
+      ],
+      "examples": [
+        {
+          "text_a": "Dir மோகன் Bro, என் குலதெய்வமும் திரௌபதி தான்.",
+          "text_b": "Dir mokan Bro, en kulatheyvamum thiraupathi thaan.",
+          "te": 6.71142578125,
+          "nie": 0.4912109375
+        },
+        {
+          "text_a": "உண்மையை சொல்ல யாருமே இல்லையேனு பார்த்தேன்.... சபாஷ்.... மோகன்",
+          "text_b": "unmaiyai solla yaarumae illaiyaenu paartthaen.... sapaash.... mokan",
+          "te": 6.9755859375,
+          "nie": 0.4052734375
+        },
+        {
+          "text_a": "பகுத்தறிவு என்பது சிறிதும் எதிர்பார்க்காத முடியவில்லை......ஏன்?",
+          "text_b": "pakuttharivu enpathu sirithum ethirpaarkkaatha mudiyavillai......aen?",
+          "te": 4.4143218994140625,
+          "nie": 0.404296875
+        }
+      ]
+    },
+    {
+      "head": "L11.H9",
+      "gate": 0.06196695938706398,
+      "primary_proxy_category": "translit_style",
+      "per_category": {
+        "caste": {
+          "nie_oriented": 0.014485677083333334,
+          "nde_oriented": 0.19171142578125,
+          "nie_share_of_te": 0.07011324470704086
+        },
+        "dialect": {
+          "nie_oriented": 0.03708839416503906,
+          "nde_oriented": 0.45220502217610675,
+          "nie_share_of_te": 0.07633003466156883
+        },
+        "region": {
+          "nie_oriented": -3.1153361002604164e-05,
+          "nde_oriented": 0.12782669067382812,
+          "nie_share_of_te": -0.00024022257356816316
+        },
+        "religion": {
+          "nie_oriented": 0.041971445083618164,
+          "nde_oriented": 0.5283854007720947,
+          "nie_share_of_te": 0.0737329781757935
+        },
+        "script": {
+          "nie_oriented": 0.1396026611328125,
+          "nde_oriented": 2.0343221028645835,
+          "nie_share_of_te": 0.06479326005622521
+        },
+        "translit_style": {
+          "nie_oriented": 0.06006622314453125,
+          "nde_oriented": 0.7181593577067057,
+          "nie_share_of_te": 0.07757018035953675
+        }
+      },
+      "dev_single_ablation": {
+        "d_cf_gap": -0.0012291371822357178,
+        "d_macro_f1": 0.012026160852217083
+      },
+      "proxy_attention_ratio": 0.8150329545247275,
+      "top_mediated_swaps": [
+        {
+          "swap": "script:tamil_script->roman",
+          "mean_oriented_nie": 0.1396026611328125,
+          "n": 24
+        },
+        {
+          "swap": "religion:christian->hindu",
+          "mean_oriented_nie": 0.09555816650390625,
+          "n": 2
+        },
+        {
+          "swap": "caste:thevar->dalit",
+          "mean_oriented_nie": 0.0908203125,
+          "n": 2
+        },
+        {
+          "swap": "translit_style:long_style->short_style",
+          "mean_oriented_nie": 0.06006622314453125,
+          "n": 24
+        },
+        {
+          "swap": "religion:hindu->muslim",
+          "mean_oriented_nie": 0.045450846354166664,
+          "n": 12
+        }
+      ],
+      "examples": [
+        {
+          "text_a": "உண்மையை சொல்ல யாருமே இல்லையேனு பார்த்தேன்.... சபாஷ்.... மோகன்",
+          "text_b": "unmaiyai solla yaarumae illaiyaenu paartthaen.... sapaash.... mokan",
+          "te": 6.9755859375,
+          "nie": 0.5224609375
+        },
+        {
+          "text_a": "Dir மோகன் Bro, என் குலதெய்வமும் திரௌபதி தான்.",
+          "text_b": "Dir mokan Bro, en kulatheyvamum thiraupathi thaan.",
+          "te": 6.71142578125,
+          "nie": 0.48828125
+        },
+        {
+          "text_a": "பகுத்தறிவு என்பது சிறிதும் எதிர்பார்க்காத முடியவில்லை......ஏன்?",
+          "text_b": "pakuttharivu enpathu sirithum ethirpaarkkaatha mudiyavillai......aen?",
+          "te": 4.4143218994140625,
+          "nie": 0.47265625
+        }
+      ]
+    }
+  ],
+  "reweight": "learned",
+  "dev_before": {
+    "cf_gap": 0.059185005724430084,
+    "cf_flip_rate": 0.061452513966480445,
+    "macro_f1": 0.7463078735163541,
+    "by_category": {
+      "natural/caste": {
+        "n": 47,
+        "cf_gap": 0.005407089367508888,
+        "cf_flip_rate": 0.0
+      },
+      "natural/dialect": {
+        "n": 59,
+        "cf_gap": 0.033949196338653564,
+        "cf_flip_rate": 0.03389830508474576
+      },
+      "natural/region": {
+        "n": 45,
+        "cf_gap": 0.019278420135378838,
+        "cf_flip_rate": 0.044444444444444446
+      },
+      "natural/religion": {
+        "n": 40,
+        "cf_gap": 0.03286537900567055,
+        "cf_flip_rate": 0.0
+      },
+      "natural/script": {
+        "n": 60,
+        "cf_gap": 0.16431394219398499,
+        "cf_flip_rate": 0.2
+      },
+      "natural/translit_style": {
+        "n": 60,
+        "cf_gap": 0.10320518165826797,
+        "cf_flip_rate": 0.1
+      },
+      "template/caste": {
+        "n": 13,
+        "cf_gap": 0.012921899557113647,
+        "cf_flip_rate": 0.0
+      },
+      "template/dialect": {
+        "n": 1,
+        "cf_gap": 0.00044950563460588455,
+        "cf_flip_rate": 0.0
+      },
+      "template/region": {
+        "n": 15,
+        "cf_gap": 0.01676330901682377,
+        "cf_flip_rate": 0.0
+      },
+      "template/religion": {
+        "n": 18,
+        "cf_gap": 0.01543999183923006,
+        "cf_flip_rate": 0.0
+      }
+    }
+  },
+  "dev_after": {
+    "cf_gap": 0.05071611329913139,
+    "cf_flip_rate": 0.05027932960893855,
+    "macro_f1": 0.751984126984127,
+    "by_category": {
+      "natural/caste": {
+        "n": 47,
+        "cf_gap": 0.012231706641614437,
+        "cf_flip_rate": 0.0
+      },
+      "natural/dialect": {
+        "n": 59,
+        "cf_gap": 0.03312144801020622,
+        "cf_flip_rate": 0.06779661016949153
+      },
+      "natural/region": {
+        "n": 45,
+        "cf_gap": 0.01759355142712593,
+        "cf_flip_rate": 0.0
+      },
+      "natural/religion": {
+        "n": 40,
+        "cf_gap": 0.0329846553504467,
+        "cf_flip_rate": 0.0
+      },
+      "natural/script": {
+        "n": 60,
+        "cf_gap": 0.13070522248744965,
+        "cf_flip_rate": 0.11666666666666667
+      },
+      "natural/translit_style": {
+        "n": 60,
+        "cf_gap": 0.07595137506723404,
+        "cf_flip_rate": 0.11666666666666667
+      },
+      "template/caste": {
+        "n": 13,
+        "cf_gap": 0.025552211329340935,
+        "cf_flip_rate": 0.0
+      },
+      "template/dialect": {
+        "n": 1,
+        "cf_gap": 0.018666058778762817,
+        "cf_flip_rate": 0.0
+      },
+      "template/region": {
+        "n": 15,
+        "cf_gap": 0.022157102823257446,
+        "cf_flip_rate": 0.0
+      },
+      "template/religion": {
+        "n": 18,
+        "cf_gap": 0.024090072140097618,
+        "cf_flip_rate": 0.0
+      }
+    }
+  },
+  "n_heads_total": 144,
+  "n_heads_modified": 8,
+  "trainable_parameters": 8
+}

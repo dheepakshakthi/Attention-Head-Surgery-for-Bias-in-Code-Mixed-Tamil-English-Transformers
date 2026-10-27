@@ -7,5 +7,14 @@
 /NeurIPS-2020-investigating-gender-bias-in-language-models-using-causal-mediation-analysis-Paper.pdf
 /E0323033.docx
 /scripts
-/outputs
-/outputs_smoke
+
+# Pipeline outputs are committed; only model folders and weight files are ignored.
+# (baseline/adversarial encoders are ~1.1 GB each; surgery/model holds gates.pt)
+/outputs/**/model/
+/outputs_smoke/**/model/
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.onnx

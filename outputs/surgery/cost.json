@@ -1,0 +1,48 @@
+{
+  "name": "surgery",
+  "n_params": 278043648,
+  "fwd_tokens": 1507292,
+  "bwd_tokens": 117097,
+  "approx_flops": 968418240761856.0,
+  "wall_seconds": 1351.224558075006,
+  "optimizer_steps": 150,
+  "gpu": "NVIDIA GeForce GTX 1650",
+  "phases": {
+    "screen": {
+      "wall_seconds": 53.956990925002174,
+      "fwd_tokens": 27096,
+      "bwd_tokens": 13331,
+      "approx_flops": 29894140858368.0
+    },
+    "exact": {
+      "wall_seconds": 152.86337779099995,
+      "fwd_tokens": 219725,
+      "bwd_tokens": 0,
+      "approx_flops": 122186281113600.0
+    },
+    "ablate": {
+      "wall_seconds": 584.5861174860001,
+      "fwd_tokens": 799300,
+      "bwd_tokens": 0,
+      "approx_flops": 444480575692800.0
+    },
+    "select": {
+      "wall_seconds": 257.20818329000394,
+      "fwd_tokens": 351692,
+      "bwd_tokens": 0,
+      "approx_flops": 195571453304832.0
+    },
+    "gates": {
+      "wall_seconds": 293.52900951500123,
+      "fwd_tokens": 103766,
+      "bwd_tokens": 103766,
+      "approx_flops": 173108863070208.0
+    },
+    "report": {
+      "wall_seconds": 9.080879067998467,
+      "fwd_tokens": 5713,
+      "bwd_tokens": 0,
+      "approx_flops": 3176926722048.0
+    }
+  }
+}

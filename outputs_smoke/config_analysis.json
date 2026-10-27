@@ -1,0 +1,111 @@
+{
+  "seed": 42,
+  "device": "auto",
+  "output_dir": "outputs_smoke",
+  "model": {
+    "name": "hf-internal-testing/tiny-random-bert",
+    "dropout": 0.1
+  },
+  "data": {
+    "task": "offensive",
+    "primary": "dravidiancodemix",
+    "dravidian_dir": "DravidianCodeMix",
+    "hasoc_dir": "HASOC_Tamil_offensive",
+    "use_second_eval": true,
+    "max_train_examples": 600,
+    "max_dev_examples": 200,
+    "max_eval_examples": 300
+  },
+  "lexicon": {
+    "seed_path": "resources/proxy_lexicon.seed.json",
+    "validated_path": "resources/proxy_lexicon.validated.json",
+    "prefer_validated": true,
+    "min_confidence": "low"
+  },
+  "counterfactual": {
+    "templates_path": "resources/templates.json",
+    "categories": [
+      "caste",
+      "religion",
+      "region",
+      "dialect",
+      "script",
+      "translit_style"
+    ],
+    "max_swaps_per_text": 2,
+    "max_pairs_per_category_train": 100,
+    "max_pairs_per_category_eval": 60,
+    "use_templates": true
+  },
+  "train": {
+    "max_length": 64,
+    "batch_size": 16,
+    "eval_batch_size": 128,
+    "grad_accum": 1,
+    "epochs": 1,
+    "lr": 0.0001,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.06,
+    "max_grad_norm": 1.0,
+    "fp16": false,
+    "class_weighted": true,
+    "patience": 2,
+    "max_steps": null
+  },
+  "analysis": {
+    "enabled": true,
+    "pairs_per_category": 4,
+    "mediators": [
+      "head_output",
+      "attention"
+    ],
+    "intervention_chunk": 48
+  },
+  "surgery": {
+    "target_categories": null,
+    "mediator": "head_output",
+    "screen_pairs_per_category": 8,
+    "exact_top_m": 6,
+    "exact_pairs_per_category": 4,
+    "intervention_chunk": 48,
+    "dev_pairs_per_category": 10,
+    "dev_task_examples": 100,
+    "ablation_weight": 0.5,
+    "k_max": 3,
+    "select_frac": 0.9,
+    "max_f1_drop": 0.2,
+    "reweight": "learned",
+    "scale_alpha": 0.3,
+    "gate_training": {
+      "steps": 10,
+      "batch_size": 16,
+      "pair_batch_size": 16,
+      "lr": 0.05,
+      "cf_weight": 1.0,
+      "init": 0.5,
+      "max_gate": 1.0
+    }
+  },
+  "adversarial": {
+    "lambda": 1.0,
+    "adv_weight": 1.0,
+    "adv_batch_size": 48,
+    "adversary_width": 256,
+    "min_group_count": 10,
+    "train_overrides": {}
+  },
+  "cda": {
+    "enabled": false
+  },
+  "evaluation": {
+    "n_bootstrap": 50,
+    "min_group_count": 3,
+    "probe_leakage": true
+  },
+  "comparison": {
+    "recovery_threshold": 0.8,
+    "cost_target": 0.05,
+    "cost_tolerance": 2.0,
+    "max_f1_drop": 0.02
+  }
+}
