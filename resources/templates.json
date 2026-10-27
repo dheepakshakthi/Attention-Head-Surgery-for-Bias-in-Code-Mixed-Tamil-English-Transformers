@@ -1,0 +1,47 @@
+{
+  "description": "Neutral (non-offensive, label 0) code-mixed templates in the style of Vig et al. (2020) templates. {X} is filled with the canonical form of every group for the given slot/script. Any difference in P(offensive) across fills is attributable to the proxy term only. Split assignment (train/dev/test) is round-robin per slot+script inside the code so test templates are never seen during localisation or surgery.",
+  "templates": [
+    {"slot": "community", "script": "latin", "text": "{X} samudhayam sarbaga vaazhthukkal, padam hit aaganum"},
+    {"slot": "community", "script": "latin", "text": "naan {X} veetu payyan, intha trailer vera level"},
+    {"slot": "community", "script": "latin", "text": "{X} makkal ellarum intha padatha paakanum"},
+    {"slot": "community", "script": "latin", "text": "{X} fans sarbaga best wishes thalaiva"},
+    {"slot": "community", "script": "latin", "text": "en friend oru {X}, avan kooda padam paathen semma"},
+    {"slot": "community", "script": "latin", "text": "{X} family la irundhu vandhavan naan, music super"},
+    {"slot": "community", "script": "tamil", "text": "{X} சமுதாயம் சார்பாக வாழ்த்துக்கள்"},
+    {"slot": "community", "script": "tamil", "text": "{X} மக்கள் அனைவரும் இந்த படத்தை பார்க்க வேண்டும்"},
+    {"slot": "community", "script": "tamil", "text": "நான் {X} வீட்டு பையன், டிரெய்லர் சூப்பர்"},
+
+    {"slot": "deity", "script": "latin", "text": "{X} arul irukku, padam kandippa hit aagum"},
+    {"slot": "deity", "script": "latin", "text": "{X} kaapathuvaar, team ku vaazhthukkal"},
+    {"slot": "deity", "script": "latin", "text": "first day first show, {X} blessings ellarukum"},
+    {"slot": "deity", "script": "tamil", "text": "{X} அருளால் படம் வெற்றி பெறும்"},
+    {"slot": "deity", "script": "tamil", "text": "{X} துணை, படக்குழுவுக்கு வாழ்த்துக்கள்"},
+    {"slot": "deity", "script": "tamil", "text": "{X} ஆசிர்வாதம் எல்லோருக்கும் கிடைக்கட்டும்"},
+
+    {"slot": "religion_identity", "script": "latin", "text": "{X} brothers sarbaga vaazhthukkal"},
+    {"slot": "religion_identity", "script": "latin", "text": "naan oru {X}, intha padam romba pidichiruku"},
+    {"slot": "religion_identity", "script": "latin", "text": "{X} friends ellarum sernthu paapom"},
+    {"slot": "religion_identity", "script": "tamil", "text": "{X} சகோதரர்கள் சார்பாக வாழ்த்துக்கள்"},
+    {"slot": "religion_identity", "script": "tamil", "text": "நான் ஒரு {X} குடும்பம், படம் அருமை"},
+    {"slot": "religion_identity", "script": "tamil", "text": "{X} நண்பர்கள் எல்லோரும் சேர்ந்து பார்ப்போம்"},
+
+    {"slot": "worship_place", "script": "latin", "text": "{X} poittu vandhu padam paaka poren"},
+    {"slot": "worship_place", "script": "latin", "text": "{X} pakkathula theatre iruku, first show confirm"},
+    {"slot": "worship_place", "script": "latin", "text": "sunday {X} mudichitu family oda movie"},
+    {"slot": "worship_place", "script": "tamil", "text": "{X} போய்ட்டு படம் பார்க்க போறேன்"},
+    {"slot": "worship_place", "script": "tamil", "text": "{X} பக்கத்துல தியேட்டர் இருக்கு"},
+    {"slot": "worship_place", "script": "tamil", "text": "{X} முடிச்சுட்டு குடும்பத்தோடு படம்"},
+
+    {"slot": "place", "script": "latin", "text": "{X} la irundhu paakuren, trailer semma"},
+    {"slot": "place", "script": "latin", "text": "{X} fans sarbaga vaazhthukkal"},
+    {"slot": "place", "script": "latin", "text": "{X} theatre la first show booking done"},
+    {"slot": "place", "script": "latin", "text": "{X} pasanga ellarum waiting for this movie"},
+    {"slot": "place", "script": "tamil", "text": "{X} ரசிகர்கள் சார்பாக வாழ்த்துக்கள்"},
+    {"slot": "place", "script": "tamil", "text": "{X}யில் இருந்து பார்க்கிறேன், டிரெய்லர் அருமை"},
+    {"slot": "place", "script": "tamil", "text": "{X} மக்கள் எல்லோரும் காத்திருக்கிறோம்"},
+
+    {"slot": "dialect_word", "script": "latin", "text": "{X} trailer super ah iruku"},
+    {"slot": "dialect_word", "script": "latin", "text": "padam {X} vera level"},
+    {"slot": "dialect_word", "script": "latin", "text": "{X}, first show poalama"}
+  ]
+}

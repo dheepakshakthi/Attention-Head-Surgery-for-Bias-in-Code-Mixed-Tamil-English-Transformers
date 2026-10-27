@@ -1,0 +1,119 @@
+h5env) dheepak@NITRO95:~/Documents/RTDL_Project_V2$ scripts/run_all.sh configs/gpu4gb.yaml
+bash: scripts/run_all.sh: Permission denied
+(h5env) dheepak@NITRO95:~/Documents/RTDL_Project_V2$ bash scripts/run_all.sh configs/gpu4gb.yaml
+================ prepare ================
+17:55:53 | INFO | [h5] stage=prepare device=cuda model=xlm-roberta-base
+17:55:53 | INFO | ===== stage: prepare =====
+17:55:53 | INFO | Read 35139 rows from tamil_offensive_full_train.csv (0 unparsable lines skipped)
+17:55:53 | INFO | Read 4388 rows from tamil_offensive_full_dev.csv (0 unparsable lines skipped)
+17:55:53 | INFO | Read 4392 rows from tamil_offensive_full_test.csv (0 unparsable lines skipped)
+17:55:54 | INFO | dev: 81/4216 texts also occur in train (kept, reported only)
+17:55:54 | INFO | test: 84/4232 texts also occur in train (kept, reported only)
+17:55:54 | INFO | hasoc_val: removed 6037 of 6969 texts that leak from train
+17:55:54 | INFO | [data] train: n=33348 label_dist={0: 25127, 1: 8221}
+17:55:54 | INFO | [data] dev: n=4216 label_dist={0: 3193, 1: 1023}
+17:55:54 | INFO | [data] test: n=4232 label_dist={0: 3190, 1: 1042}
+17:55:54 | INFO | [data] hasoc_val: n=932 label_dist={0: 722, 1: 210}
+17:55:55 | INFO | [lexicon] using resources/proxy_lexicon.seed.json
+17:56:03 | INFO | [cf] train: 12698 natural + 134 template pairs; by (source,category)={('natural', 'translit_style'): 4000, ('natural', 'caste'): 2074, ('natural', 'script'): 4000, ('natural', 'religion'): 370, ('natural', 'dialect'): 1710, ('natural', 'region'): 544, ('template', 'caste'): 84, ('template', 'religion'): 18, ('template', 'region'): 20, ('template', 'dialect'): 12}
+17:56:04 | INFO | [cf] dev: 2824 natural + 134 template pairs; by (source,category)={('natural', 'translit_style'): 1500, ('natural', 'caste'): 258, ('natural', 'script'): 761, ('natural', 'dialect'): 199, ('natural', 'region'): 66, ('natural', 'religion'): 40, ('template', 'caste'): 84, ('template', 'religion'): 18, ('template', 'region'): 20, ('template', 'dialect'): 12}
+17:56:05 | INFO | [cf] test: 2821 natural + 144 template pairs; by (source,category)={('natural', 'translit_style'): 1500, ('natural', 'dialect'): 205, ('natural', 'script'): 762, ('natural', 'caste'): 236, ('natural', 'region'): 86, ('natural', 'religion'): 32, ('template', 'caste'): 84, ('template', 'religion'): 18, ('template', 'region'): 30, ('template', 'dialect'): 12}
+17:56:05 | INFO | [cf] hasoc_val: 809 natural + 144 template pairs; by (source,category)={('natural', 'translit_style'): 555, ('natural', 'dialect'): 44, ('natural', 'region'): 12, ('natural', 'caste'): 50, ('natural', 'script'): 148, ('template', 'caste'): 84, ('template', 'religion'): 18, ('template', 'region'): 30, ('template', 'dialect'): 12}
+17:56:23 | INFO | [prepare] lexicon coverage on train:
+      category        group  count  positive_rate
+         caste     vanniyar    370       0.064865
+         caste      gounder    174       0.057471
+         caste       thevar    170       0.100000
+         caste        nadar    106       0.056604
+         caste        dalit     97       0.350515
+         caste     mudaliar     49       0.102041
+         caste     chettiar     48       0.125000
+         caste      brahmin     23       0.086957
+       dialect     standard   1592       0.422739
+       dialect       madras     30       0.400000
+       dialect        kongu      4       0.250000
+       dialect       jaffna      1       1.000000
+        region        kongu     87       0.080460
+        region       nellai     76       0.065789
+        region      madurai     59       0.050847
+        region      chennai     50       0.260000
+      religion        hindu    163       0.312883
+      religion       muslim     17       0.411765
+      religion    christian      5       0.800000
+        script        roman  27155       0.257374
+        script tamil_script   6193       0.198934
+translit_style   long_style  19967       0.293484
+translit_style  short_style   6738       0.153458
+================ baseline ================
+17:56:27 | INFO | [h5] stage=baseline device=cuda model=xlm-roberta-base
+17:56:27 | INFO | ===== stage: baseline =====
+17:56:31 | INFO | [train] word embeddings frozen
+17:56:31 | INFO | [train] gradient checkpointing enabled
+train ep0:   0%|                                                                   | 3/4169 [00:01<44:35,  1.56it/s]/home/dheepak/Documents/RTDL_Project_V2/src/h5/engine.py:223: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  sched.step()
+19:11:04 | INFO | [train] epoch 0: accuracy=0.7782, macro_f1=0.7405, offensive_f1=0.6416, train_loss=0.5508         
+20:25:34 | INFO | [train] epoch 1: accuracy=0.7683, macro_f1=0.7373, offensive_f1=0.6472, train_loss=0.4325         
+21:40:09 | INFO | [train] epoch 2: accuracy=0.8202, macro_f1=0.7785, offensive_f1=0.6823, train_loss=0.3742         
+================ analysis ================
+21:40:15 | INFO | [h5] stage=analysis device=cuda model=xlm-roberta-base
+21:40:15 | INFO | ===== stage: analysis =====
+Some weights of XLMRobertaModel were not initialized from the model checkpoint at outputs/baseline/model/encoder and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+================ surgery ================                                                                           
+22:27:47 | INFO | [h5] stage=surgery device=cuda model=xlm-roberta-base
+22:27:47 | INFO | ===== stage: surgery =====
+Some weights of XLMRobertaModel were not initialized from the model checkpoint at outputs/baseline/model/encoder and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+22:27:49 | INFO | [surgery] screening 144 heads with attribution patching on 384 pairs
+22:28:43 | INFO | [surgery] exact NIE/NDE for 24 candidate heads on 144 pairs                                       
+/home/dheepak/Documents/RTDL_Project_V2/src/h5/mediation.py:316: RuntimeWarning: Mean of empty slice                
+  entry[f"{key}_oriented"] = np.nanmean(ori, 0)
+/home/dheepak/Documents/RTDL_Project_V2/src/h5/mediation.py:317: RuntimeWarning: Mean of empty slice
+  entry[f"{key}_abs"] = np.nanmean(np.abs(vals), 0)
+22:44:54 | INFO | [surgery] selected 8 heads: ['L11.H3', 'L4.H6', 'L3.H11', 'L11.H0', 'L11.H7', 'L7.H9', 'L10.H1', 'L11.H9']
+================ adversarial ================                                                                       
+22:50:24 | INFO | [h5] stage=adversarial device=cuda model=xlm-roberta-base
+22:50:24 | INFO | ===== stage: adversarial =====
+22:50:27 | INFO | [adv] adversary categories: script(2 groups), translit_style(2 groups), caste(8 groups), religion(3 groups), dialect(4 groups), region(5 groups)
+22:50:27 | INFO | [train] word embeddings frozen
+22:50:27 | INFO | [train] gradient checkpointing enabled
+adv_train ep0:   0%|                                                             | 3/4169 [00:21<8:07:33,  7.02s/it]/home/dheepak/Documents/RTDL_Project_V2/src/h5/engine.py:223: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  sched.step()
+adv_train ep0:   9%|██▏                     | 390/4169 [46:36<7:09:17,  6.82s/it, adv=1.276, lam=0.038, loss=1.9525]
+
+(h5env) dheepak@NITRO95:~/Documents/RTDL_Project_V2$ export PYTHONPATH=src
+  export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+  python -m h5.cli adversarial --config configs/gpu4gb.yaml && \
+  python -m h5.cli evaluate    --config configs/gpu4gb.yaml && \
+  python -m h5.cli compare     --config configs/gpu4gb.yaml
+22:47:03 | INFO | [h5] stage=adversarial device=cuda model=xlm-roberta-base
+22:47:03 | INFO | ===== stage: adversarial =====
+22:47:07 | INFO | [adv] adversary categories: script(2 groups), translit_style(2 groups), caste(8 groups), religion(3 groups), dialect(4 groups), region(5 groups)
+22:47:07 | INFO | [train] word embeddings frozen
+22:47:07 | INFO | [train] gradient checkpointing enabled
+adv_train ep0:   0%|                                                             | 3/4169 [00:21<8:09:19,  7.05s/it]/home/dheepak/Documents/RTDL_Project_V2/src/h5/engine.py:223: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  sched.step()
+07:03:51 | INFO | [adv_train] epoch 0: accuracy=0.7861, macro_f1=0.7451, offensive_f1=0.6429, train_loss=1.8090     
+15:19:48 | INFO | [adv_train] epoch 1: accuracy=0.7611, macro_f1=0.7306, offensive_f1=0.6400, train_loss=1.6932             
+adv_train ep2:  80%|███████████████████████▏     | 3327/4169 [6:37:46<1:43:13,  7.36s/it, adv=1.251, lam=0.823, loss=1.6471]
+
+adv_train ep2:  80%|███████████████████████▏     | 3336/4169 [6:38:45<1:36:12,  6.93s/it, adv=1.291, lam=0.823, loss=1.6470]23:38:57 | INFO | [adv_train] epoch 2: accuracy=0.8214, macro_f1=0.7793, offensive_f1=0.6829, train_loss=1.6488             
+23:39:38 | INFO | [h5] stage=evaluate device=cuda model=xlm-roberta-base
+23:39:38 | INFO | ===== stage: evaluate =====
+23:39:38 | INFO | [lexicon] using resources/proxy_lexicon.seed.json
+Some weights of XLMRobertaModel were not initialized from the model checkpoint at outputs/baseline/model/encoder and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+23:40:31 | INFO | [eval] hasoc_val: accuracy=0.8369, macro_f1=0.7879, offensive_f1=0.6860, cf_gap=0.0872                    
+23:43:53 | INFO | [eval] test: accuracy=0.8162, macro_f1=0.7747, offensive_f1=0.6780, cf_gap=0.0980                         
+Some weights of XLMRobertaModel were not initialized from the model checkpoint at outputs/baseline/model/encoder and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+23:45:03 | INFO | [eval] hasoc_val: accuracy=0.8466, macro_f1=0.7951, offensive_f1=0.6925, cf_gap=0.0708                    
+23:48:24 | INFO | [eval] test: accuracy=0.8277, macro_f1=0.7810, offensive_f1=0.6798, cf_gap=0.0816                         
+Some weights of XLMRobertaModel were not initialized from the model checkpoint at outputs/adversarial/model/encoder and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+23:49:34 | INFO | [eval] hasoc_val: accuracy=0.8380, macro_f1=0.7867, offensive_f1=0.6821, cf_gap=0.0858                    
+23:52:55 | INFO | [eval] test: accuracy=0.8143, macro_f1=0.7716, offensive_f1=0.6728, cf_gap=0.1033                         
+23:53:13 | INFO | [evaluate] skip cda (no model)
+23:53:17 | INFO | [h5] stage=compare device=cuda model=xlm-roberta-base
+23:53:17 | INFO | ===== stage: compare =====
+23:53:21 | INFO | [compare] recovery=-3.0863020635345904, cost_ratio=0.04720044442893675, claim_supported=False

@@ -1,0 +1,104 @@
+# Full experiment (single GPU, >= 12 GB recommended). See README.md.
+seed: 42
+device: auto                # auto | cuda | cpu
+output_dir: outputs
+
+model:
+  # Any BERT-family encoder exposing encoder.layer[i].attention.self works:
+  # xlm-roberta-base, bert-base-multilingual-cased, google/muril-base-cased
+  name: xlm-roberta-base
+  dropout: 0.1
+
+data:
+  task: offensive            # offensive (binary) | sentiment (Positive / Negative / Mixed)
+  primary: dravidiancodemix  # dravidiancodemix | hasoc
+  dravidian_dir: DravidianCodeMix
+  hasoc_dir: HASOC_Tamil_offensive
+  use_second_eval: true      # evaluate on the other dataset too (leakage-filtered)
+  max_train_examples: null   # e.g. 5000 for a quick run
+  max_dev_examples: null
+  max_eval_examples: null
+
+lexicon:
+  seed_path: resources/proxy_lexicon.seed.json
+  validated_path: resources/proxy_lexicon.validated.json
+  prefer_validated: true     # use the native-speaker validated lexicon when it exists
+  min_confidence: low        # low | medium | high
+
+counterfactual:
+  templates_path: resources/templates.json
+  categories: [caste, religion, region, dialect, script, translit_style]
+  max_swaps_per_text: 2
+  max_pairs_per_category_train: 4000
+  max_pairs_per_category_eval: 1500
+  use_templates: true
+
+train:
+  max_length: 128
+  batch_size: 32
+  eval_batch_size: 128
+  grad_accum: 1
+  epochs: 3
+  lr: 2.0e-5
+  weight_decay: 0.01
+  warmup_ratio: 0.06
+  max_grad_norm: 1.0
+  fp16: true
+  class_weighted: true
+  patience: 2
+  max_steps: null
+  freeze_word_embeddings: false   # true saves ~2.3 GB on XLM-R (see configs/gpu4gb.yaml)
+  gradient_checkpointing: false
+  optimizer_foreach: null         # null = torch default
+
+analysis:                    # full L x H Vig analysis (diagnostic; not used by surgery)
+  enabled: true
+  pairs_per_category: 40
+  mediators: [head_output, attention]
+  intervention_chunk: 48
+
+surgery:
+  target_categories: null    # null = all categories that have pairs
+  mediator: head_output      # head_output | attention
+  screen_pairs_per_category: 64
+  exact_top_m: 24
+  exact_pairs_per_category: 24
+  intervention_chunk: 48
+  dev_pairs_per_category: 60
+  dev_task_examples: 400
+  ablation_weight: 0.5       # rank = (1-w) z(NIE) + w z(ablation benefit)
+  k_max: 10
+  select_frac: 0.9
+  max_f1_drop: 0.01
+  reweight: learned          # zero | scale | learned
+  scale_alpha: 0.3
+  gate_training:
+    steps: 150
+    batch_size: 16
+    pair_batch_size: 16
+    lr: 0.05
+    cf_weight: 1.0
+    init: 0.5
+    max_gate: 1.0
+
+adversarial:
+  lambda: 1.0
+  adv_weight: 1.0
+  adv_batch_size: 48
+  adversary_width: 256
+  min_group_count: 10
+  train_overrides: {}        # e.g. {epochs: 4}
+
+cda:
+  enabled: false             # extra baseline; enable with --set cda.enabled=true
+
+evaluation:
+  n_bootstrap: 1000
+  min_group_count: 20
+  probe_leakage: true
+
+comparison:
+  recovery_threshold: 0.8    # "most" of the adversarial gain
+  cost_target: 0.05          # "about 5 %"
+  cost_tolerance: 2.0        # accept ratio <= target * tolerance (i.e. <= 10 %)
+  max_f1_drop: 0.02

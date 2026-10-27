@@ -1,0 +1,11 @@
+H5 — Attention head surgery for bias in code-mixed Tamil-English transformers
+
+Problem statement:
+Fairness research in NLP is almost entirely English and almost entirely built on American proxy variables. The Indian internet runs substantially on code-mixed Tamil-English, where the bias vectors are different ones: script switching, dialect such as Madras Bashai or Kongu or Jaffna Tamil, transliteration style, region-marked and caste-marked surnames, and religious marker tokens. No lexicon of these proxies exists, and no debiasing method has been evaluated against them. Standard adversarial debiasing would also remove bias without saying what it removed.
+
+Novelty:
+Three pieces: the first India-specific proxy-feature lexicon and counterfactual augmentation protocol for Tamil-English code-mixing; bias localised to individual attention heads by causal ablation; and targeted head re-weighting as the debiasing method. The claim is that head surgery recovers most of the fairness gain of full adversarial debiasing at roughly five per cent of the training cost, and unlike adversarial debiasing it names what was taken out.
+
+Base paper:
+Vig, J., Gehrmann, S., Belinkov, Y., Qian, S., Nevo, D., Singer, Y. and Shieber, S. Investigating Gender Bias in Language Models Using Causal Mediation Analysis. Advances in Neural Information Processing Systems 33 (NeurIPS 2020).
+Public dataset.  DravidianCodeMix, released openly on Zenodo by Chakravarthi and colleagues, with sentiment and offensive-language annotations for Tamil-English YouTube comments. The HASOC and DravidianLangTech Tamil shared-task sets are also public and give a second evaluation split. TamilMixSentiment is the smaller fallback. The proxy lexicon does not exist anywhere and has to be annotated by native speakers, which is the schedule risk and also the citable resource contribution.

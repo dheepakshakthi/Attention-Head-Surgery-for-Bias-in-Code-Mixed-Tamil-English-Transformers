@@ -1,0 +1,120 @@
+{
+  "version": "seed-0.1",
+  "status": "PROVISIONAL SEED. Compiled by the engineering team from public knowledge and from inspection of the DravidianCodeMix comments. Every entry MUST be validated by native Tamil speakers (see `h5 lexicon-export` / `h5 lexicon-merge` and README section 'Lexicon annotation protocol') before results are reported as a resource contribution. Only community / identity names are listed - no slurs.",
+  "matching": {
+    "latin_suffixes": ["s", "gal", "kal", "nga", "ga", "ukku", "kku", "oda", "ku", "la", "ai", "u", "e", "a", "o"],
+    "tamil_left_boundary": true
+  },
+  "categories": {
+    "caste": {
+      "description": "Caste / community names and caste-marked surnames.",
+      "groups": ["thevar", "gounder", "nadar", "vanniyar", "brahmin", "dalit", "chettiar", "mudaliar"],
+      "rows": [
+        {"id": "caste_lat", "slot": "community", "script": "latin", "confidence": "medium",
+         "forms": {
+           "thevar": ["thevar", "devar", "mukkulathor", "maravar"],
+           "gounder": ["gounder", "goundar", "kounder", "gownder"],
+           "nadar": ["nadar", "naadar"],
+           "vanniyar": ["vanniyar", "vanniar", "padayachi", "padaiyachi"],
+           "brahmin": ["iyer", "iyengar", "brahmin", "brahmins"],
+           "dalit": ["dalit", "pallar", "paraiyar", "devendrakula", "arunthathiyar", "adi dravidar"],
+           "chettiar": ["chettiar", "chettiyar", "chetty"],
+           "mudaliar": ["mudaliar", "mudaliyar"]
+         },
+         "notes": "'pillai' deliberately excluded (also means 'child'); 'naidu'/'reddiar' omitted from seed."},
+        {"id": "caste_ta", "slot": "community", "script": "tamil", "confidence": "medium",
+         "forms": {
+           "thevar": ["தேவர்", "முக்குலத்தோர்", "மறவர்"],
+           "gounder": ["கவுண்டர்"],
+           "nadar": ["நாடார்"],
+           "vanniyar": ["வன்னியர்", "படையாச்சி"],
+           "brahmin": ["ஐயர்", "ஐயங்கார்", "பிராமணர்"],
+           "dalit": ["தலித்", "பள்ளர்", "பறையர்", "தேவேந்திரகுல", "ஆதிதிராவிடர்", "அருந்ததியர்"],
+           "chettiar": ["செட்டியார்"],
+           "mudaliar": ["முதலியார்"]
+         }}
+      ]
+    },
+    "religion": {
+      "description": "Religion marker tokens: deities, identity nouns, places of worship.",
+      "groups": ["hindu", "muslim", "christian"],
+      "rows": [
+        {"id": "rel_deity_lat", "slot": "deity", "script": "latin", "confidence": "medium",
+         "forms": {"hindu": ["murugan", "muruga", "perumal", "vinayagar", "sivan", "shiva"],
+                   "muslim": ["allah"],
+                   "christian": ["yesu", "jesus", "karthar"]},
+         "notes": "'alla' excluded (Tamil 'not'); 'siva' excluded (common personal name)."},
+        {"id": "rel_ident_lat", "slot": "religion_identity", "script": "latin", "confidence": "high",
+         "forms": {"hindu": ["hindu", "hindhu", "hindus"],
+                   "muslim": ["muslim", "muslims", "islam", "islamic"],
+                   "christian": ["christian", "christians", "christhavar"]}},
+        {"id": "rel_place_lat", "slot": "worship_place", "script": "latin", "confidence": "medium",
+         "forms": {"hindu": ["kovil", "koil", "temple"],
+                   "muslim": ["masjid", "mosque", "pallivasal"],
+                   "christian": ["church"]}},
+        {"id": "rel_deity_ta", "slot": "deity", "script": "tamil", "confidence": "medium",
+         "forms": {"hindu": ["முருகன்", "பெருமாள்", "விநாயகர்", "சிவன்"],
+                   "muslim": ["அல்லா"],
+                   "christian": ["இயேசு", "கர்த்தர்"]}},
+        {"id": "rel_ident_ta", "slot": "religion_identity", "script": "tamil", "confidence": "high",
+         "forms": {"hindu": ["இந்து"],
+                   "muslim": ["முஸ்லிம்", "இஸ்லாமிய", "இஸ்லாம்"],
+                   "christian": ["கிறிஸ்தவ"]}},
+        {"id": "rel_place_ta", "slot": "worship_place", "script": "tamil", "confidence": "medium",
+         "forms": {"hindu": ["கோவில்", "கோயில்"],
+                   "muslim": ["மசூதி", "பள்ளிவாசல்"],
+                   "christian": ["தேவாலயம்", "சர்ச்"]}}
+      ]
+    },
+    "region": {
+      "description": "Region-marking place names (Chennai/North, Madurai/South, Kongu/West, Nellai/far South, Jaffna/Sri Lanka).",
+      "groups": ["chennai", "madurai", "kongu", "nellai", "jaffna"],
+      "rows": [
+        {"id": "region_lat", "slot": "place", "script": "latin", "confidence": "high",
+         "forms": {"chennai": ["chennai", "madras"],
+                   "madurai": ["madurai"],
+                   "kongu": ["kovai", "coimbatore", "erode", "tirupur", "salem"],
+                   "nellai": ["nellai", "tirunelveli"],
+                   "jaffna": ["jaffna", "yaalpanam", "yazhpanam"]}},
+        {"id": "region_ta", "slot": "place", "script": "tamil", "confidence": "high",
+         "forms": {"chennai": ["சென்னை"],
+                   "madurai": ["மதுரை"],
+                   "kongu": ["கோவை", "கோயம்புத்தூர்", "ஈரோடு", "சேலம்"],
+                   "nellai": ["நெல்லை", "திருநெல்வேலி"],
+                   "jaffna": ["யாழ்ப்பாணம்"]}}
+      ]
+    },
+    "dialect": {
+      "description": "Dialect-marked lexical variants: standard/Central, Madras Bashai, Kongu, Jaffna (Sri Lankan) Tamil. LOW confidence - highest priority for native-speaker validation.",
+      "groups": ["standard", "madras", "kongu", "jaffna"],
+      "rows": [
+        {"id": "dia_what", "slot": "dialect_word", "script": "latin", "confidence": "low",
+         "forms": {"standard": ["enna"], "madras": ["inna"]}},
+        {"id": "dia_friend", "slot": "dialect_word", "script": "latin", "confidence": "low",
+         "forms": {"standard": ["nanba", "nanban"], "madras": ["machan", "macha", "machi"], "kongu": ["maapla", "mapla"]}},
+        {"id": "dia_house", "slot": "dialect_word", "script": "latin", "confidence": "low",
+         "forms": {"standard": ["veetla", "veetula"], "madras": ["vootla", "vootula"]}},
+        {"id": "dia_father", "slot": "dialect_word", "script": "latin", "confidence": "low",
+         "forms": {"standard": ["appa"], "madras": ["naina"]}},
+        {"id": "dia_boy", "slot": "dialect_word", "script": "latin", "confidence": "low",
+         "forms": {"standard": ["paiyan", "payyan"], "jaffna": ["podiyan"]}},
+        {"id": "dia_tell", "slot": "dialect_word", "script": "latin", "confidence": "low",
+         "forms": {"standard": ["sollunga"], "jaffna": ["sollungo"]}},
+        {"id": "dia_come", "slot": "dialect_word", "script": "latin", "confidence": "low",
+         "forms": {"standard": ["vaanga", "vanga"], "jaffna": ["vaango", "vango"]}},
+        {"id": "dia_yes", "slot": "dialect_word", "script": "latin", "confidence": "low",
+         "forms": {"standard": ["aamaa", "aama"], "kongu": ["aamanga", "aamaanga"], "jaffna": ["oom"]}},
+        {"id": "dia_what_ta", "slot": "dialect_word", "script": "tamil", "confidence": "low",
+         "forms": {"standard": ["என்ன"], "madras": ["இன்னா"]}},
+        {"id": "dia_tell_ta", "slot": "dialect_word", "script": "tamil", "confidence": "low",
+         "forms": {"standard": ["சொல்லுங்க"], "jaffna": ["சொல்லுங்கோ"]}},
+        {"id": "dia_come_ta", "slot": "dialect_word", "script": "tamil", "confidence": "low",
+         "forms": {"standard": ["வாங்க"], "jaffna": ["வாங்கோ"]}}
+      ]
+    }
+  },
+  "rule_based_categories": {
+    "script": {"description": "Tamil script vs Roman transliteration of the same comment.", "groups": ["tamil_script", "roman"]},
+    "translit_style": {"description": "Long phonetic Roman spelling (aa/ee/oo/zh/th) vs short casual spelling.", "groups": ["long_style", "short_style"]}
+  }
+}

@@ -1,0 +1,40 @@
+# Fast end-to-end check (CPU-friendly, ~minutes). Numbers are NOT meaningful.
+extends: default.yaml
+output_dir: outputs_smoke
+
+model:
+  name: hf-internal-testing/tiny-random-bert   # 2 layers x 4 heads; swap for a real model when needed
+
+data:
+  max_train_examples: 600
+  max_dev_examples: 200
+  max_eval_examples: 300
+
+counterfactual:
+  max_pairs_per_category_train: 100
+  max_pairs_per_category_eval: 60
+
+train:
+  max_length: 64
+  batch_size: 16
+  epochs: 1
+  lr: 1.0e-4
+  fp16: false
+
+analysis:
+  pairs_per_category: 4
+
+surgery:
+  screen_pairs_per_category: 8
+  exact_top_m: 6
+  exact_pairs_per_category: 4
+  dev_pairs_per_category: 10
+  dev_task_examples: 100
+  k_max: 3
+  max_f1_drop: 0.2
+  gate_training:
+    steps: 10
+
+evaluation:
+  n_bootstrap: 50
+  min_group_count: 3

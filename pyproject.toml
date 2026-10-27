@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "h5"
+version = "0.1.0"
+description = "Attention-head surgery for bias in code-mixed Tamil-English transformers"
+requires-python = ">=3.9"
+
+[project.scripts]
+h5 = "h5.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

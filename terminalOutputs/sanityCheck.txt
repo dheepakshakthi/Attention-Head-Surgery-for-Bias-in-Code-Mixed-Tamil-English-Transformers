@@ -1,0 +1,100 @@
+dheepak@NITRO95:~/Documents/RTDL_Project_V2$ source h5env/bin/activate
+(h5env) dheepak@NITRO95:~/Documents/RTDL_Project_V2$ pytest -q
+...................                                                                                                                                                                                                                  [100%]
+19 passed in 10.23s
+(h5env) dheepak@NITRO95:~/Documents/RTDL_Project_V2$ bash scripts/run_all.sh configs/smoke.yaml
+================ prepare ================
+19:09:32 | INFO | [h5] stage=prepare device=cuda model=hf-internal-testing/tiny-random-bert
+19:09:32 | INFO | ===== stage: prepare =====
+19:09:32 | INFO | Read 35139 rows from tamil_offensive_full_train.csv (0 unparsable lines skipped)
+19:09:32 | INFO | Read 4388 rows from tamil_offensive_full_dev.csv (0 unparsable lines skipped)
+19:09:32 | INFO | Read 4392 rows from tamil_offensive_full_test.csv (0 unparsable lines skipped)
+19:09:33 | INFO | dev: 81/4216 texts also occur in train (kept, reported only)
+19:09:33 | INFO | test: 84/4232 texts also occur in train (kept, reported only)
+19:09:33 | INFO | hasoc_val: removed 6037 of 6969 texts that leak from train
+19:09:33 | INFO | [data] train: n=600 label_dist={0: 452, 1: 148}
+19:09:33 | INFO | [data] dev: n=200 label_dist={0: 151, 1: 49}
+19:09:33 | INFO | [data] test: n=300 label_dist={0: 226, 1: 74}
+19:09:33 | INFO | [data] hasoc_val: n=300 label_dist={0: 232, 1: 68}
+19:09:33 | INFO | [lexicon] using resources/proxy_lexicon.seed.json
+19:09:33 | INFO | [cf] train: 300 natural + 134 template pairs; by (source,category)={('natural', 'translit_style'): 100, ('natural', 'dialect'): 40, ('natural', 'script'): 100, ('natural', 'caste'): 44, ('natural', 'religion'): 10, ('natural', 'region'): 6, ('template', 'caste'): 84, ('template', 'religion'): 18, ('template', 'region'): 20, ('template', 'dialect'): 12}
+19:09:33 | INFO | [cf] dev: 112 natural + 134 template pairs; by (source,category)={('natural', 'script'): 28, ('natural', 'caste'): 10, ('natural', 'translit_style'): 60, ('natural', 'region'): 6, ('natural', 'dialect'): 6, ('natural', 'religion'): 2, ('template', 'caste'): 84, ('template', 'religion'): 18, ('template', 'region'): 20, ('template', 'dialect'): 12}
+19:09:33 | INFO | [cf] test: 159 natural + 144 template pairs; by (source,category)={('natural', 'translit_style'): 60, ('natural', 'script'): 57, ('natural', 'dialect'): 8, ('natural', 'region'): 8, ('natural', 'religion'): 4, ('natural', 'caste'): 22, ('template', 'caste'): 84, ('template', 'religion'): 18, ('template', 'region'): 30, ('template', 'dialect'): 12}
+19:09:33 | INFO | [cf] hasoc_val: 147 natural + 144 template pairs; by (source,category)={('natural', 'translit_style'): 60, ('natural', 'script'): 53, ('natural', 'dialect'): 16, ('natural', 'caste'): 18, ('template', 'caste'): 84, ('template', 'religion'): 18, ('template', 'region'): 30, ('template', 'dialect'): 12}
+19:09:34 | INFO | [prepare] lexicon coverage on train:
+      category        group  count  positive_rate
+         caste     vanniyar      9       0.222222
+         caste      gounder      3       0.000000
+         caste       thevar      3       0.333333
+         caste     chettiar      2       0.000000
+         caste        dalit      2       0.000000
+         caste     mudaliar      2       0.000000
+         caste        nadar      1       0.000000
+       dialect     standard     33       0.242424
+       dialect       madras      2       0.500000
+        region        kongu      2       0.000000
+        region       nellai      1       0.000000
+      religion        hindu      4       0.250000
+      religion       muslim      1       1.000000
+        script        roman    494       0.259109
+        script tamil_script    106       0.188679
+translit_style   long_style    374       0.299465
+translit_style  short_style    114       0.140351
+================ baseline ================
+19:09:37 | INFO | [h5] stage=baseline device=cuda model=hf-internal-testing/tiny-random-bert
+19:09:37 | INFO | ===== stage: baseline =====
+config.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 548/548 [00:00<00:00, 5.83MB/s]
+model.safetensors: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 520k/520k [00:00<00:00, 1.14MB/s]
+tokenizer_config.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 321/321 [00:00<00:00, 2.08MB/s]
+vocab.txt: 4.68kB [00:00, 20.5MB/s]
+tokenizer.json: 12.9kB [00:00, 30.4MB/s]
+special_tokens_map.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 112/112 [00:00<00:00, 1.53MB/s]
+19:09:44 | INFO | [train] epoch 0: accuracy=0.7550, macro_f1=0.4302, offensive_f1=0.0000, train_loss=0.6900                                                                                                                                 
+================ analysis ================
+19:09:47 | INFO | [h5] stage=analysis device=cuda model=hf-internal-testing/tiny-random-bert
+19:09:47 | INFO | ===== stage: analysis =====
+Some weights of BertModel were not initialized from the model checkpoint at outputs_smoke/baseline/model/encoder and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+================ surgery ================                                                                                                                                                                                                   
+19:09:53 | INFO | [h5] stage=surgery device=cuda model=hf-internal-testing/tiny-random-bert
+19:09:53 | INFO | ===== stage: surgery =====
+Some weights of BertModel were not initialized from the model checkpoint at outputs_smoke/baseline/model/encoder and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+19:09:54 | INFO | [surgery] screening 20 heads with attribution patching on 48 pairs
+19:09:55 | INFO | [surgery] exact NIE/NDE for 6 candidate heads on 24 pairs                                                                                                                                                                 
+/home/dheepak/Documents/RTDL_Project_V2/src/h5/mediation.py:316: RuntimeWarning: Mean of empty slice                                                                                                                                        
+  entry[f"{key}_oriented"] = np.nanmean(ori, 0)
+/home/dheepak/Documents/RTDL_Project_V2/src/h5/mediation.py:317: RuntimeWarning: Mean of empty slice
+  entry[f"{key}_abs"] = np.nanmean(np.abs(vals), 0)
+19:09:56 | INFO | [surgery] selected 3 heads: ['L3.H1', 'L2.H0', 'L0.H1']                                                                                                                                                                   
+================ adversarial ================                                                                                                                                                                                               
+19:10:00 | INFO | [h5] stage=adversarial device=cuda model=hf-internal-testing/tiny-random-bert
+19:10:00 | INFO | ===== stage: adversarial =====
+19:10:02 | INFO | [adv] adversary categories: script(2 groups), translit_style(2 groups), dialect(2 groups), caste(6 groups), religion(2 groups)
+19:10:04 | INFO | [adv_train] epoch 0: accuracy=0.7550, macro_f1=0.4302, offensive_f1=0.0000, train_loss=1.6186                                                                                                                             
+================ cda ================
+19:10:08 | INFO | [h5] stage=cda device=cuda model=hf-internal-testing/tiny-random-bert
+19:10:08 | INFO | CDA baseline disabled - enable with --set cda.enabled=true
+================ evaluate ================
+19:10:12 | INFO | [h5] stage=evaluate device=cuda model=hf-internal-testing/tiny-random-bert
+19:10:12 | INFO | ===== stage: evaluate =====
+19:10:12 | INFO | [lexicon] using resources/proxy_lexicon.seed.json
+Some weights of BertModel were not initialized from the model checkpoint at outputs_smoke/baseline/model/encoder and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+19:10:13 | INFO | [eval] hasoc_val: accuracy=0.7733, macro_f1=0.4361, offensive_f1=0.0000, cf_gap=0.0011                                                                                                                                    
+19:10:13 | INFO | [eval] test: accuracy=0.7533, macro_f1=0.4297, offensive_f1=0.0000, cf_gap=0.0011                                                                                                                                         
+Some weights of BertModel were not initialized from the model checkpoint at outputs_smoke/baseline/model/encoder and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+19:10:14 | INFO | [eval] hasoc_val: accuracy=0.7733, macro_f1=0.4361, offensive_f1=0.0000, cf_gap=0.0010                                                                                                                                    
+19:10:14 | INFO | [eval] test: accuracy=0.7533, macro_f1=0.4297, offensive_f1=0.0000, cf_gap=0.0010                                                                                                                                         
+Some weights of BertModel were not initialized from the model checkpoint at outputs_smoke/adversarial/model/encoder and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+19:10:14 | INFO | [eval] hasoc_val: accuracy=0.7733, macro_f1=0.4361, offensive_f1=0.0000, cf_gap=0.0009                                                                                                                                    
+19:10:14 | INFO | [eval] test: accuracy=0.7533, macro_f1=0.4297, offensive_f1=0.0000, cf_gap=0.0009                                                                                                                                         
+19:10:15 | INFO | [evaluate] skip cda (no model)
+================ compare ================
+19:10:18 | INFO | [h5] stage=compare device=cuda model=hf-internal-testing/tiny-random-bert
+19:10:18 | INFO | ===== stage: compare =====
+19:10:23 | INFO | [compare] recovery=0.5309667970684739, cost_ratio=0.6361042879321791, claim_supported=False
+Done. See <output_dir>/REPORT.md (outputs/ for default.yaml, outputs_smoke/ for smoke.yaml)
+(h5env) dheepak@NITRO95:~/Documents/RTDL_Project_V2$ 

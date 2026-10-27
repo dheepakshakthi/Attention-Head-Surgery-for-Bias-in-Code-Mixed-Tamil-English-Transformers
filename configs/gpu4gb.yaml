@@ -1,0 +1,27 @@
+# Full experiment on a ~4 GB GPU (e.g. GTX 1650 / laptop RTX 3050).
+# Full fine-tuning of XLM-R base needs ~4.5 GB for weights + grads + AdamW states alone,
+# so the word-embedding matrix is frozen (transformer layers are still fully fine-tuned),
+# activations are checkpointed and the batch is split with gradient accumulation
+# (effective batch 8 x 4 = 32, same as default.yaml).
+# Baseline, adversarial and CDA all use these settings, so the comparison stays fair.
+extends: default.yaml
+
+train:
+  batch_size: 8
+  grad_accum: 4
+  eval_batch_size: 32
+  freeze_word_embeddings: true
+  gradient_checkpointing: true
+  optimizer_foreach: false
+
+analysis:
+  intervention_chunk: 12
+
+surgery:
+  intervention_chunk: 12
+  gate_training:
+    batch_size: 8
+    pair_batch_size: 8
+
+adversarial:
+  adv_batch_size: 24
